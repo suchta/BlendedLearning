@@ -1,0 +1,40 @@
+{
+    "course":[
+        {
+            "id": 68807,
+            "name": "Mathematics - 7th Grade Part 1",
+            "code": "MSDEMO.MA007.A.1",
+            "teacher": "David Mullich",
+            "grade": 60,
+            "isComplete": false,
+            "isLocked": false
+        },
+        {
+            "id": 68808,
+            "name": "Science - 7th Grade Part 1",
+            "code": "MSDEMO.SC007.A.1",
+            "teacher": "David Mullich",
+            "grade": 60,
+            "isComplete": false,
+            "isLocked": false
+        },
+        {
+            "id": 68809,
+            "name": "Social Studies - 7th Grade Part 1",
+            "code": "MSDEMO.SS007.A.1",
+            "teacher": "David Mullich",
+            "grade": 60,
+            "isComplete": false,
+            "isLocked": false
+        },
+        {
+            "id": 68810,
+            "name": "Language Arts - 7th Grade Part 1",
+            "code": "MSDEMO.LA007.A.1",
+            "teacher": "David Mullich",
+            "grade": 60,
+            "isComplete": false,
+            "isLocked": false
+        }
+    ]
+}

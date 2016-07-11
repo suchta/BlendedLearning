@@ -1,0 +1,17 @@
+						<h4 id="shd-studentscoursetitle">{{courseTitle}}</h4>
+						<ul>
+						<!-- search by single field: http://stackoverflow.com/questions/14733136/angular-js-ng-repeat-filter-by-single-field -->
+							<li  ng-repeat="student in studentlist | filter:search" class="shd-studentlistitem {{determinebackground(student)}}" ng-click="selectStudent($event, student)">
+							
+							<div class="shd-picholder" style="background: url({{getStudentPicURL(student)}}) center no-repeat; background-size: 100% auto;"> 
+								<div class="{{producealertStyle(student)}}">
+							
+								</div>
+							
+							</div>
+							
+							<p class="shd-studentname">{{student.name}}</p>
+							
+					
+							</li>
+						</ul>

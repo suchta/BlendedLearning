@@ -1,0 +1,296 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* GENERIC MODULES */
+
+#bls-modules {
+  background: #e6ede6;
+  margin-right: 370px; /* to create a layout with a fluid left and a fixed right: http://stackoverflow.com/questions/2453029/relative-width-for-a-css-layout-fixed-and-fluid-mix */
+}
+
+#bls-modules li {
+  display: table;  /* otherwise li elements would get an extra 'padding' of 20pixels which I cant get rid of */
+  width: 100%;
+}
+
+.bls-modulelistitem {
+  height: 53px;
+  border-bottom: #f7fCf8 1px solid;
+  box-shadow: inset 0 -1px 0 #b7beb7; 
+  display: table;
+  width: 100%;
+}
+
+.bls-moduletitle {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 12px;
+  letter-spacing: 0.1em;
+  width: 60%;
+  font-weight: bold;
+}
+
+.bls-modulemiscinfo {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 12px;
+  text-align: left;
+  color: #666666;
+  text-indent: 0px;
+}
+
+.bls-modulealert {
+  display: table-cell;
+  vertical-align: middle;
+  width: 25px;
+  height: 53px;
+  float: right;
+  background: url(/core/res/img/exclamation.png) center no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.bls-chatbutton {
+  display: table-cell;
+  vertical-align: middle;
+  width: 8%;
+  background: url(/core/res/img/chatIcon.png) left no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.moduledetailtoggle,.mainmoduledetailtoggle, .moduledetailtoggle_charts {
+  display: none;
+}
+
+.bls-modulelinkcell {  /* in order to get vertical align we must have another container*/
+  display: table-cell;
+  vertical-align: middle;
+  width: 10%;
+}
+
+
+/* MAIN MODULES */
+
+.bls-mainmoduletitle {
+  font-size: 19px;
+  color: #6d9d0c;
+}
+
+.bls-mainmoduledetailslink {
+  float:right;
+  background: url(/core/res/img/downarrow.png) center no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+
+/* SUB MODULES */
+
+.bls-submoduletitle {
+  font-size: 16px;
+  color: #333333;
+}
+
+.bls-submodulelistitem {
+  background: #d7ddd7;
+  text-indent: 25px;
+}
+
+
+.bls-moduledetaildata {
+  display: block;
+  background: linear-gradient( 0deg, #ecf5d2, #f2f6e5 ); 
+  /* box shadow 1 or 2 direction only: http://stackoverflow.com/questions/4756316/css3-box-shadows-in-one-direction-only */
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2) inset, 0px -2px 5px rgba(0,0,0,0.2) inset; 
+}
+
+.moduledetailtoggle + div, .moduledetailtoggle_charts + div { /* close the Div immediately after the checkbox */
+  height: 0px; 
+  overflow: hidden; 
+  transition: .6s all cubic-bezier(0.730, -0.485, 0.145, 1.620); 
+}
+
+.moduledetailtoggle:checked + div {  /* when ticked, open the Div immediately after the checkbox */
+  height: 260px;  /* only works for elements with a hard coded height */
+}
+
+.moduledetailtoggle_charts:checked + div {  /* when ticked, open the Div immediately after the checkbox */
+  height: 415px;  /* only works for elements with a hard coded height */
+}
+
+.bls-moduledetailslink {
+  float: right;
+  margin-right: 10px;
+}
+
+
+.bls-chartTemplate img {
+  margin: auto;
+  display: block;
+  margin-bottom: 15px;
+  /*background: url(/core/res/img/chartsImage.png) no-repeat top center ;
+  height: 100%;*/
+}
+
+
+.bls-chartspopup {
+  position:absolute;
+  z-index:20000;
+  top: 0px;
+  left: 0px;
+  display: none;
+  background-color:#fff;
+  width: 153px;
+  height: 90px;
+  border-radius: 8px;
+  -webkit-box-shadow: 1px 1px 20px rgba(0,0,0,0.6);
+  -moz-box-shadow: 1px 1px 20px rgba(0,0,0,0.6);
+  box-shadow: 0px 2px 20px rgba(0,0,0,0.6);
+}
+
+
+/* MODULE DETAIL ELEMENTS */
+
+.bls-calendarbutton {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 49px;
+  width: 49px;
+  background-image: url(/core/res/img/calendar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+
+}
+
+.mainmoduledetailtoggle + div { /* close the Div immediately after the checkbox */
+  height: 0px; 
+  overflow: hidden; 
+  transition: .6s all cubic-bezier(0.730, -0.485, 0.145, 1.620); 
+}
+
+.mainmoduledetailtoggle:checked + div {  /* when ticked, open the Div immediately after the checkbox */
+  height: auto;  /* only works for elements with a hard coded height */
+}
+
+.bls-moduletable {
+  width: 100%;
+  height: 100%;
+}
+.bls-moduletable td {
+
+  vertical-align:middle;
+}
+
+
+.bls-moduletable {  /* Borders only on the inside #2 anser at: http://stackoverflow.com/questions/1257430/css-border-only-inside-the-table*/
+  border-collapse: collapse;
+  border-style: hidden;
+}
+
+.bls-moduletable td {
+  border: 1px solid #CCCCCC;
+  text-align:center;
+}
+
+.bls-moduletable th {
+  text-align:center;
+}
+
+
+/* Chart Popup*/
+
+.bls-chartPopupText { 
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 12px;
+  vertical-align: bottom;
+}
+
+.bls-chartPopupDefinion { 
+  font-size: 36px;
+  font-weight: bold;
+  vertical-align:top;
+  margin: auto;
+  text-align:center;
+}
+
+
+/* Table contents*/
+
+.bls-moduletable td span dd, .bls-moduletable td span dt { 
+  margin: auto;
+  text-align:center;
+  display: table-cell;
+}
+
+.bls-moduletable td span dd { 
+  vertical-align: bottom;
+}
+
+.bls-moduletable td span dt { 
+  font-size: 12px;
+}
+
+.bls-moduletable td span dd { 
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.bls-spanRow {
+  display: table-row;
+  
+}
+
+.bls-spanTable {
+  display: table;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+/* Charts Table contents*/
+
+.bls-chartsmoduletable .bls-moduletable td span dd, .bls-chartsmoduletable td span dt { 
+  margin: auto;
+  text-align:left;
+  display: table-cell;
+  padding-left: 10px;
+}
+.bls-chartsmoduletable td { 
+  width: 25%;
+}
+.bls-chartsmoduletable td span dd { 
+  vertical-align: bottom;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.bls-chartsmoduletable td span dt { 
+  font-size: 12px;
+}
+
+.bls-chartsmoduletable td span dd { 
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.bls-chartDetailButton {
+  float: right;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+

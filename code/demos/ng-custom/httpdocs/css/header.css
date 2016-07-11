@@ -1,0 +1,319 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/* HEADER */
+
+.bls-header {
+
+
+}
+
+
+#bls-studentData {
+  height: 95px;
+  background: #e6ede6; 
+  display: table;
+  width: 100%;
+}
+
+#bls-studentData select option {
+  height: 20px;
+}
+/*
+#bls-studentData select option:first-of-type {
+  background: url(/core/res/img/exclamation.png) 275px no-repeat;
+} */
+
+
+
+#bls-nameinfo {
+
+  float: left;
+  width: 100%;
+  height: inherit;
+}
+
+/* dropdown box with CSS style only: http://bavotasan.com/2011/style-select-box-using-only-css/ */
+/* Javascript version with more customising: http://tympanus.net/codrops/2012/10/04/custom-drop-down-list-styling/ */
+
+#bls-name {  
+  width: 277px;
+  height: 40px;
+  overflow: hidden;
+  background: #fff url(/core/res/img/dropdownarrow.png) no-repeat right;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+#bls-name select {
+  background: transparent;
+  width: 307px;
+  padding-left: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666666;
+  border: 0;
+  border-radius: 0;
+  
+padding:10px 5px;
+  outline:none; /* remove focus ring from Webkit */
+  -webkit-appearance: none;
+}
+
+#bls-info {
+  margin-left: 10px;
+  letter-spacing: 0.15em;
+  height: 26px;
+  width: 100%;
+  display: table;
+
+}
+
+#bls-infodetail {
+  display: table-cell;
+  font-size: 11px;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#bls-infoschool {
+  display: table-cell;
+  color: #666666;
+  vertical-align: middle;
+  line-height: 26px;
+  margin-left: 15px;
+  width: auto;
+}
+
+#bls-infoschool ul {
+  width: 100%;
+}
+
+#bls-infoschool li {
+  display: inline-block;
+  color: #666666;
+  font-size: 14px;
+  width: 24%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  background-image: url(/core/res/img/studentinfoborder.jpg);
+  background-position: center left;
+  background-repeat: no-repeat;
+
+}
+
+#bls-infoschool ul li:first-of-type  {
+  width: 12%;
+  min-width: 75px;
+}
+
+#bls-infoschool ul li:nth-child(3)  {
+  width: 17%;
+  min-width: 105px
+}
+
+#bls-infoschool ul li:nth-child(2)  {
+  width: 32%;
+  padding-left: 3px;
+}
+
+
+#bls-infoschool ul li.bls-infoliseparator {
+  width: 1% !important;
+}
+/* width: 100px;
+#bls-infoschool ul li:last-of-type  {
+  width: 120px;
+}
+
+
+#bls-infoschool li:hover {
+  text-overflow:inherit;
+  overflow:visible;
+  width: auto;
+  min-width: 100px; so that it doesnt shrink if its smaller 
+}
+*/
+
+
+#bls-picdate {
+  width: 296px;
+  display: table-cell;
+}
+
+#bls-pic {
+  width: 75px;
+  height: 75px;
+  margin: 10px 15px;
+  background: #fff;
+  float: left;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#bls-date {
+  margin: 10px 0px;
+  width: 190px;
+  height: 75px;
+  border-left: #999 1px solid;
+  float: right;
+}
+
+#bls-periodtable {
+  width: 160px;
+  margin: auto;
+}
+
+.bls-periodtablerow {
+  border: #ccc 1px solid;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 3px 10px 3px rgba(0,0,0,0.1) inset;
+  margin-bottom: 5px;
+}
+
+.bls-periodtabledt {
+  display: inline;
+  float: left;
+  font-size: 13px;
+  color: #999;
+  margin-left: 10px;
+  line-height: 25px;
+  vertical-align: middle;
+}
+
+.bls-periodtabledd {
+  display: inline;
+  float: right;
+  color: #669900;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  line-height: 25px;
+  vertical-align: middle;
+}
+
+#bls-period {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+}
+
+#bls-mainnavbar {
+  width: 100%;
+  background: #e5e5e5;
+  background: linear-gradient( 0deg, #747476, #adadaf );  /* https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient */
+  border-top: #bcbcbe 1px solid;
+  border-bottom: #c9cec8 1px solid;
+  box-shadow: inset 0 -1px 0 #4f4f51; /* http://daverupert.com/2011/06/two-tone-borders-with-css3/ */
+}
+
+.bls-mainnavbarul {
+  width: 100%;
+  margin: auto auto;
+}
+
+.bls-mainnavbaritems {
+  height: 34px;
+  border-left: #cccccc 1px solid;
+  border-right: #6b6b6b 1px solid;
+  float: left;
+  display: table
+}
+
+.bls-navlink {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #eee;
+  text-shadow: 0px 0px 2px #000;
+  cursor: pointer;
+  text-decoration: none;
+  
+  /* http://learn.shayhowe.com/advanced-html-css/transitions-animations */
+  transition-property: color;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+.bls-navlink:hover  {
+  color: #ccff00;
+}
+
+/*  the only way to centralise floats it to manually add maring to the first and last, otherwise we would have to use hacks like: http://pmob.co.uk/pob/centred-float.htm */
+.bls-mainnavbarul li.bls-mainnavbaritems:first-of-type {
+  margin-left: 4.3%;
+  box-shadow: -1px 0 1px 0px #6b6b6b;
+}
+
+.bls-mainnavbarul li.bls-mainnavbaritems:last-of-type {
+  margin-right: 4.3%;
+  box-shadow: 1px 0 1px 0px #ccc;
+}
+
+
+
+.bls-currenttab {
+  box-shadow: 0px 10px 20px 5px rgba(0,0,0,0.4) inset;
+  color: #ccff00;
+  cursor: default;
+}
+
+
+
+
+
+/* pure css div open:  http://demosthenes.info/blog/506/HTML5-Window-Toggle-Events-In-Pure-CSS3 */
+
+#plp-studentdetaildata {
+  background-color: #f0f7dc;
+  /* box shadow 1 or 2 direction only: http://stackoverflow.com/questions/4756316/css3-box-shadows-in-one-direction-only */
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.2) inset, 0px -2px 5px rgba(0,0,0,0.2) inset; 
+}
+
+/* 3 columns with just 1 ul: http://localhost:8888/debug.html#/PlpWizard/123/123/Performance*/
+#plp-studentdetaildata ul {
+  padding: 15px;
+}
+#plp-studentdetaildata li {
+  float: left;
+  width: 33.333%;
+  display: inline;
+  line-height: 2.5em;
+  font-size: 12px;
+}
+
+#plp-studentdetaildata li dt {
+  font-weight: bold;
+  margin-right: 15px;
+}
+#plp-studentdetaildata li dt, #plp-studentdetaildata li dd {
+  display: inline;
+}
+
+.studentdetailtoggle + div { /* close the Div immediately after the checkbox */
+  height: 0px; 
+  overflow: hidden; 
+  transition: .6s all cubic-bezier(0.730, -0.485, 0.145, 1.620); 
+}
+
+.studentdetailtoggle:checked + div {  /* when ticked, open the Div immediately after the checkbox */
+  height: 326px;  /* only works for elements with a hard coded height */
+}
+
+.studentdetailtoggle {
+  display: none;
+}

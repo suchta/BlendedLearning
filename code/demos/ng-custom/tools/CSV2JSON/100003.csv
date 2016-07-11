@@ -1,0 +1,41 @@
+firstName,First Name,John
+lastName,Last Name,Say
+middleInitial,Middle Initial,K.
+,,
+suffix,Suffix,Sr.
+nickname,"""Nickname""",Jon
+age,Age,17
+,,
+studentId,Student Id,100003
+schools,Schools,Irvine High School
+familyId,Family Id,495
+,,
+username,Username,test
+password,Password,test
+,,
+gender,Gender,Male
+dateOfBirth,D.O.B,3/14/96
+somefield,somefield,Male
+,,
+status,Active,Active
+email,Email,jon.say@tmail.com
+timezone,Timezone,"(GMT -8, DST) Pacific"
+,,
+country,Country,United States of America
+schoolDistrict,School District,Orange County
+studentRole,Student Role,Tutor
+,,
+gradeLevel,Grade Level,11th Grade
+gradeLevelStartDate,Grade Level Start,9/5/10
+geniusUsername,Genius Username,test
+,,
+,,
+startDate,9/16/13,
+endDate,9/30/13,
+imageUrl,/core/res/img/sp100003.png,
+topData,2013,School Year
+topData,Irvine High School,School Name
+topData,11th Grade,Grade Level
+topData,(714) 555-3954,Parent's cell
+,,
+isMeetingGoals,FALSE,

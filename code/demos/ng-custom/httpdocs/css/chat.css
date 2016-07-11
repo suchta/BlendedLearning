@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* CHAT */
+
+#plp-chat {
+  width: 0px;  /* will expand to 208px, and height 100%*/
+  background: #f7f7f7;
+  float: left;
+}
+

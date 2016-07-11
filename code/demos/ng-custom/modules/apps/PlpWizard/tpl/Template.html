@@ -1,0 +1,141 @@
+        <div id="bls-content">
+          <div id="bls-note">
+            <ul class="bls-notesul">
+              <li id="bls-notestitle">
+                <p>NOTE</p>
+                <a ng-click="openCurrentTabNotes()">NOTE</a>
+              </li>
+              <li id="bls-notesformli">
+              <form id="bls-notesform" name="note" action="#" method="get">     
+                <table id="bls-notestable">
+                  <tbody><tr>
+                    <th id="bls-goals">GOALS</th>
+                    <th class="bls-current">current</th>
+                    <th class="bls-new">new</th>
+                  </tr>
+                  <tr ng-repeat="goal in currentTabData.goals">
+                    <td class="bls-notecol1">{{goal[1]}}</td>
+                    <td class="bls-notecol2">{{goal[2] + goal[4]}}</td>
+                    <td class="bls-notecol3"><input type="text" name="new" ng-model="goal[3]"  ></td>
+                  </tr>
+                </tbody></table>
+                <a class="bls-noteformsubmit bls-buttonmedium bls-grassgreenbutton" href="" onclick="openGoalsDialog()">APPLY</a>
+              </form>
+              </li>
+
+            </ul>
+          </div>
+
+    
+          <!--  <div ng-include src="'/apps/PlpWizard/tpl/testtest.html'" ></div> -->
+          
+          
+          <div id="bls-modules">
+          
+
+          
+            <ul>
+              <!-- MAIN MODULES -->
+              <li ng-repeat="data in tabModules">
+              
+    
+              
+                <div class="bls-modulelistitem ">
+                  <p class="bls-moduletitle {{isSubModuleTitle(data.type)}}">{{data.title + alertstext( convertNullString(data.alertCount) ) }}</p>
+                  <p class="bls-modulealert" style="{{isHiddenStyle(data.hasAlert)}}"></p>
+                  <p class="bls-modulemiscinfo" style="{{isHiddenStyle(data.alertMessage)}}">{{convertNullString(data.alertMessage)}}</p>
+                  <p class="bls-chatbutton" style="{{isHiddenStyle(data.hasMessageBubble)}}" ng-click="sendMessage()">chat</p>
+                  <p class="bls-modulelinkcell"> <label for="moduledetailcheckbox{{$index}}" class="{{isSubModuleDetailButton(data.type)}}">DETAILS</label> </p>
+                </div>
+                
+                
+               
+                <span ng-switch="data.type=='sub'"> <!-- http://docs.angularjs.org/api/ng.directive:ngSwitch-->
+                
+                    <span ng-switch-when="true">
+                      <input type="checkbox" id="moduledetailcheckbox{{$index}}" class="{{isSubModuleToggle(data.type, data.children)}}">  <!-- MUST BE NEXT SIBLING TO THE DIV IT WILL OPEN -->
+                      <div class="bls-moduledetaildata">      
+                           
+                           
+     
+                                 
+                      <!-- CONDITIONAL CONTENT -->
+                       <span ng-repeat="child in data.children"> 
+                         <span ng-switch="child.type">
+                         
+                         <span ng-switch-when="table">  <coursetable num-columns="child.columns" data="child.data"> </coursetable> </span>
+                             <!--  <span ng-switch-when="table"> <ng-include src="'/apps/PlpWizard/tpl/Module.html'" ></ng-include> </span> -->
+                             <span ng-switch-when="chart"> <ng-include src="'/apps/PlpWizard/tpl/Charts.html'" ></ng-include> </span>
+                              
+                             <span  ng-switch-default> {{data.type}} </span>
+                         </span>
+                      </span>
+             		   <!-- CONDITIONAL CONTENT END -->
+                
+                
+                </div> 
+                    </span>
+                   
+                    
+                    <span ng-switch-when="false">
+                      <input type="checkbox" id="moduledetailcheckbox{{$index}}" class="{{isSubModuleToggle(data.type)}}"> <!-- MUST BE NEXT SIBLING TO THE DIV IT WILL OPEN -->
+                      <div> <!-- CHECKBOX DIV -->
+                      <!-- OPTIONAL SUB MODULES -->
+                      <span ng-repeat="sub in data.children"> 
+                        <div class="bls-modulelistitem bls-submodulelistitem">   <!-- sub modules have ALWAYS the same style -->
+                          <p class="bls-moduletitle bls-submoduletitle">{{sub.title + alertstext( convertNullString(sub.alertCount) )  }}</p>
+                          <p class="bls-modulealert" style="{{isHiddenStyle(sub.hasAlert)}}"></p>
+                          <p class="bls-modulemiscinfo" style="{{isHiddenStyle(sub.alertMessage)}}">{{convertNullString(sub.alertMessage)}}</p>
+                          <p class="bls-chatbutton" style="{{isHiddenStyle(sub.hasMessageBubble)}}" ng-click="sendMessage()">chat</p>
+                          <p class="bls-modulelinkcell"> <label for="{{data.title+$index}}" class="bls-buttonsmall bls-greenbutton2 bls-moduledetailslink">DETAILS</label> </p>
+                        </div>
+                        <input type="checkbox" id="{{data.title+$index}}" class="{{isSubModuleToggle(sub.type, sub.children)}}">
+                        <div class="bls-moduledetaildata">
+                        
+                        
+                        
+                      <!-- CONDITIONAL CONTENT -->
+                      <span ng-repeat="child in sub.children"> 
+                          <span ng-switch="child.type">
+                           <span ng-switch-when="table">  <coursetable num-columns="child.columns" data="child.data"> </coursetable> </span>
+                             <!--    <span ng-switch-when="table"> <ng-include src="'/apps/PlpWizard/tpl/Module.html'" ></ng-include> </span> -->
+                              <span ng-switch-when="chart"> <ng-include src="'/apps/PlpWizard/tpl/Charts.html'" ></ng-include> </span>
+                              <span  ng-switch-default>  {{sub.type}} </span>
+                          </span>
+                       </span>
+             		   <!-- CONDITIONAL CONTENT END -->
+                        
+                        
+                        </div> 
+                      </span>
+                      <!-- OPTIONAL SUB MODULES END -->
+                      </div>  <!-- CHECKBOX DIV -->
+ 
+                    </span>
+                    
+                    <span ng-switch-default></span>
+                </span>  <!-- END OF NG-SWITCH -->
+          
+               
+  
+                
+              </li>   
+              <!-- MAIN MODULES END-->
+
+              <!--
+              <li>
+                <div class="bls-modulelistitem">
+                  <p class="bls-moduletitle bls-submoduletitle">Orphan Sub Module Title</p>
+                  <p class="bls-modulealert">alert</p>
+                  <p class="bls-modulemiscinfo">Event</p>
+                  <p class="bls-chatbutton">chat</p>
+                  <p class="bls-modulelinkcell"> <label for="moduledetailcheckbox3" class="bls-buttonsmall bls-greenbutton2 bls-moduledetailslink">DETAILS</label> </p>
+                </div>
+                <input type="checkbox" id="moduledetailcheckbox3" class="moduledetailtoggle">
+                <div class="bls-moduledetaildata"> <a class="bls-calendarbutton" href="" onclick="openCalendarDialog()">calendar</a></div> 
+              </li>
+              
+              -->
+            </ul>
+          </div>
+        </div>

@@ -1,0 +1,41 @@
+firstName,First Name,Kondo
+lastName,Last Name,Park
+middleInitial,Middle Initial,C.
+,,
+suffix,Suffix,n/a
+nickname,"""Nickname""",Kondo
+age,Age,16
+,,
+studentId,Student Id,100004
+schools,Schools,Rocky Mountain High School
+familyId,Family Id,175
+,,
+username,Username,test
+password,Password,test
+,,
+gender,Gender,Male
+dateOfBirth,D.O.B,11/20/96
+somefield,somefield,Male
+,,
+status,Active,Active
+email,Email,kpark@tmail.com
+timezone,Timezone,"(GMT -7, DST) Mountain"
+,,
+country,Country,United States of America
+schoolDistrict,School District,Colorado Unified
+studentRole,Student Role,Tutor
+,,
+gradeLevel,Grade Level,10th Grade
+gradeLevelStartDate,Grade Level Start,9/5/11
+geniusUsername,Genius Username,test
+,,
+,,
+startDate,9/16/13,
+endDate,9/30/13,
+imageUrl,/core/res/img/sp100004.png,
+topData,2013,School Year
+topData,Rocky Mountain High School,School Name
+topData,10th Grade,Grade Level
+topData,(345) 555-4968,Parent's cell
+,,
+isMeetingGoals,TRUE,

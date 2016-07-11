@@ -1,0 +1,338 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/* HEADER */
+
+#shd-header {
+  display: table-row;
+  height: 181px;
+}
+
+#shd-headerinfo {
+  background-color: #e6ede6;
+  border-bottom: 1px solid #9B9D9C;
+  display: table;
+  width: 100%;
+}
+
+
+
+#shd-welcomebox {
+  height: 130px;
+  position:relative;
+  padding-left: 15px;
+  display: table-cell;
+  float: left;
+}
+
+#shd-dateformat {
+  font-weight: normal;
+}
+
+#shd-usernameformat {
+  margin-top: 15px;
+}
+
+#shd-dateselector {
+  margin-bottom: 15px;
+  position: absolute; 
+  bottom: 0px; /* align div at bottom http://stackoverflow.com/questions/5150411/align-divs-to-the-bottom-of-their-container */
+}
+
+.shd-leftoffset {
+  margin-left: 15px;
+}
+
+#shd-welcomebox h3 {
+  padding: 0px;
+  font-size: 21px;
+  letter-spacing: 0.025em;
+}
+
+
+
+#shd-dateprev {
+  width: 28px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-right: 1px;
+  background: #999999 url(/core/res/img/LeftArrowGreen.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#shd-datecurrent {
+  width: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 1px;
+}
+
+#shd-datenext {
+  width: 28px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #999999 url(/core/res/img/RightArrowGreen.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.shd-dateselectorbutton {
+  color: #e6ede6;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  height: 23px;
+  text-align: center;
+  line-height: 23px;
+  font-size: 11px;
+  text-decoration: none;
+  text-indent: 0px;
+}
+
+
+/* CALENDAR */
+
+#shd-calendarholder {
+  width: 220px;
+  padding: 0px;
+  margin: 0px;
+  display: table-cell;
+  float: right;
+}
+
+#shd-prevdate {
+  display: table-cell;
+  width: 30px;
+  background: url(/core/res/img/LeftArrowGrey.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#shd-calendar {
+  /*background: url(/core/res/img/calendarmock.png);*/
+  display: table-cell;
+  height: 130px;
+  width: 160px;
+}
+
+#shd-nextdate {
+  display: table-cell;
+  width: 30px;
+  background: url(/core/res/img/RightArrowGrey.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+
+/* EVENTS PAGES */
+
+#shd-headerevent {
+  display: table-row;
+  height: 131px;
+}
+
+#shd-welcomeboxevent {
+  height: 80px;
+  position:relative;
+  padding-left: 15px;
+  display: table-cell;
+  float: left;
+}
+#shd-dateformatevent {
+  font-weight: normal;
+  display: inline-block;
+  padding-right: 15px;
+}
+
+#shd-coursetitle {
+  color: #999;
+  font-weight: normal;
+  display: inline-block;
+  padding-left: 20px;
+  background: url(/core/res/img/eventSeparatorLine.png);
+  background-position: center left;
+  background-repeat: no-repeat;
+
+}
+
+
+/* SCHEDULE NAV */
+
+#shd-backtoschedule {
+  background: #999 url(/core/res/img/ScheduleBackArrow.png);
+  background-position: 5px center ;
+  background-repeat: no-repeat;
+  
+}
+
+.shd-classlistviewbutton {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #999;
+  color: #fff;
+  width: 113px;
+  height: 24px;
+  line-height: 24px;
+  vertical-align: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+
+
+.shd-viewcurrent {
+  background-color: #666;
+}
+
+#shd-classlistoptionsholder {
+  width: 340px;
+  padding: 0px;
+  margin: 0px;
+  display: table-cell;
+  float: right;
+  vertical-align: bottom;
+  height: 80px;
+  position: relative;
+}
+
+#shd-options {
+  position: absolute;
+  margin-bottom: 5px;
+  margin-right: 15px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+
+
+
+.shd-firbase {
+  display: inline-block;
+  width: 31px;
+  height: 31px;
+
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.shd-displayNone  {
+  display: none !important;
+}
+
+#shd-gradebookbutton {
+  background: url(/core/res/img/icon.top.gradebook.18x24.png) center no-repeat;
+}
+
+.shd-searchbutton {
+  display: inherit;
+  float: right;
+  background: url(/core/res/img/icon.top.search.22x22.png) center no-repeat;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+
+.shd-searchbuttonactive {
+  display: inherit;
+  float: right;
+  background: #52c4ff url(/core/res/img/icon.top.search.22x22.active.png) center no-repeat;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border: 1px solid #9B9D9C;
+  border-left: none;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  
+}
+
+
+.shd-searchbox {
+  display: inline-block;
+  width: 284px;
+}
+
+.shd-searchfilter {
+  float: right;
+  display: inline-block;
+  width: 240px;
+  height: 32px;
+  border: 1px solid #9B9D9C;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  text-indent: 10px;
+}
+
+
+
+/* CALENDAR DESIGN */
+#shd-calendar button {
+  border: none;
+  background: none;
+}
+
+#shd-calendar thead tr button strong{
+  color: #666 !important;
+  font-size: 14px !important;
+  visibility:visible;
+}
+
+
+#shd-calendar button{
+  color: #999 !important;
+  font-size: 10px !important;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+
+
+#shd-calendar thead th{
+  color: #999 !important;
+  font-size: 10px !important;
+}
+
+
+/* display first letter only: http://jsfiddle.net/H7jhF/ */
+  
+#shd-calendar thead th{
+  color: #999 !important;
+  font-size: 10px !important;
+  visibility:hidden;
+  text-align: right;
+  position: relative;
+  width: 5px;
+  left: 3px;
+	
+}
+
+
+	
+	
+#shd-calendar thead th:first-letter{
+    visibility:visible;
+
+}

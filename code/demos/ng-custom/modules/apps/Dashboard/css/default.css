@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+
+.dashboard-titleheader {
+  background-image:url('/core/res/icons/title.dashboard.svg');
+}
+
+li.done {text-decoration:line-through}
+
+#dashboard-title {
+	margin: 15px 0 0 15px;
+}
+
+#dashboard-name {
+	font-size: 16;
+	font-weight: bold;
+	color: #555;
+}
+
+#dashboard-date {
+	margin-top: 3px;
+	color: #555;
+}
+
+div#chart_wrapper {
+	max-width: 1000px;
+	margin-left: 20px;
+}
+div.chart_item {
+	/*height: 100px;*/
+	width: 30%;
+	float: left;
+	margin: 10px;
+	box-shadow: 2px 2px 10px #bec5be;
+	border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	background: #fff;
+	padding: -20px;
+	position: relative;
+}
+div.material_bin {
+	float: right;
+	top: 20px;
+	right: 20px;
+	position: absolute;
+	z-index: 0;
+}
+.material_bin_popup {
+	float: left;
+	position: absolute;
+	z-index: 1;
+	/*left: 50px;
+	top: 20px;*/
+}
+.popup_students {
+	float: left;
+	position: absolute;
+	z-index: 1;
+	width: auto;
+	height: auto;
+}
+.popoupmenu {
+	float: left;
+	position: absolute;
+	z-index: 1;
+	width: auto;
+	height: auto;
+}
+ul.list {
+	display: block;
+	padding: 1px;
+	z-index: 999;
+	width: 200px;
+	background: #fff;
+	list-style:none;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 5px #999;
+	-moz-box-shadow: 0 0 5px #999;
+	-webkit-border-radius: 0 0 5px #999;
+	border: 1px solid black;
+}
+
+ul.list li {
+	padding: 10px;
+	border-bottom: solid 1px #f2f2f2;
+	font-family: 'Helvetica';
+	color: #222;
+}
+
+ul.list li:hover {
+	background: #e6ede6;
+}
+
+ul.list li:first-child:hover {
+	background: #fff;
+}
+
+ul.list li:last-child {
+	border: none;
+}

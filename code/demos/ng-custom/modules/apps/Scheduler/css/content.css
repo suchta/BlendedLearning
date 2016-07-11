@@ -1,0 +1,801 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CONTENT */
+
+
+
+#shd-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+
+
+
+
+
+
+/* CONTENT AREA */
+
+
+
+/* Fixed + Remainder colum layout: http://stackoverflow.com/questions/3568262/css-columns-fixed-width-and-remainder */
+
+#shd-eventlistContainer {
+  display: table-cell;
+  vertical-align:top;
+}
+
+
+#shd-eventlist {
+  display: table-row;
+  width: 100%;
+}
+
+#shd-timeslots { /* LEFT */
+  width: 40px;
+  float: left;
+}
+
+#shd-eventarea { /* RIGHT */
+  margin-left: 40px;
+  height: 558px;
+  background-image: url(/core/res/img/shdhorizline.png), url(/core/res/img/shdvertline.png);
+  background-repeat: repeat, repeat-y;
+  position: relative;
+  overflow: hidden;
+}
+
+#shd-timeslots  ul { 
+  margin-top: 30px;
+
+}
+
+.shd-timeslotitem { 
+  height: 62px;
+  font-size: 10px;
+  color: #666;
+  text-align: center;
+  line-height: 60px;
+  vertical-align: middle;
+}
+
+/* EVENT ITEM */
+.shd-eventNum { /* LEFT */
+  width: 38px;
+  float: left;
+  border-radius: 5px;
+  border: 1px solid #b3dee7;
+  background: rgba(179, 222, 231, .5);
+  color: #CCC;
+  font-size: 20px;
+  text-align: center;
+}
+
+.shd-eventName { /* RIGHT */
+  margin-left: 40px;
+  border-radius: 5px;
+  display: block;
+  color: #666;
+  text-decoration: none;
+  text-indent: 10px;
+  line-height: 26px;
+}
+
+#shd-eventarea  ul { 
+  list-style-type: none;
+  height: 100%;
+  overflow: hidden;
+}
+
+#shd-eventarea  ul li { 
+  position: relative;
+}
+
+#shd-timeplayhead { 
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #ff0000;
+}
+
+/* Draw Circle with CSS only http://stackoverflow.com/questions/6936972/draw-circle-using-css-alone*/
+#shd-timeplayheadcirlce { 
+  left: 38px;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #ff0000;
+  border-radius: 50%;
+}
+
+/* EVENT CONTENT*/
+/* 3 COLUMN layout: http://stackoverflow.com/questions/12489909/how-to-have-a-3-column-layout-with-fixed-left-right-fluid-middle-and-fixed-foot*/
+#shd-eventcontent { 
+  height: 100%;
+  display: table;
+  width: 100%;
+}
+
+#shd-eventcontentholder { 
+    display: table-row;
+}
+
+#shd-eventmiscbuttons {
+  display: table-cell;
+  width: 39px;
+  height: 100%;
+  border-right: 1px solid #e5e5e5;
+  text-align: center;
+  position: relative;
+
+}
+
+#shd-eventdetail {
+  display: table-cell;
+  height: 100%;
+  width: 180px;
+  border-left: 1px solid #e5e5e5;
+  vertical-align: top;
+  
+}
+
+#shd-eventclopanel {
+  display: table-cell;
+  height: 100%;
+  width: 168px;
+  border-right: 1px solid #e5e5e5;
+  vertical-align: top;
+  
+}
+#shd-eventclopanel ul li {
+  list-style-type: none;
+}
+	
+/* MISC BUTTONS */
+
+.shd-irmiscbase {
+  display: inline-block;
+  width: 25px;
+  height: 30px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-bottom: 5px;
+}
+
+.shd-irmiscbase38 {
+  width: 38px;
+}
+
+#shd-rollcallbutton  {
+  background: url(/core/res/img/icon.class.rollcall.22x28.svg) center no-repeat;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+#shd-customlearnbutton  {
+  background: url(/core/res/img/icon.class.CLO.22x25.svg) center no-repeat;
+}
+
+#shd-customlearnbuttonactive  {
+  background: #66cbff url(/core/res/img/cloitemactive.png) center no-repeat;
+}
+
+#shd-peoplebutton  {
+  background: url(/core/res/img/icon.class.resources-people.25x22.svg) center no-repeat;
+}
+
+#shd-curriculumbutton  {
+  background: url(/core/res/img/icon.class.resources-curriculum.25x22.svg) center no-repeat;
+
+}
+
+#shd-physicalbutton  {
+  background: url(/core/res/img/icon.class.resources-physical.25x22.svg) center no-repeat;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* ROTATE TEXT VERTICALLY: http://css-tricks.com/snippets/css/text-rotation/  */
+#shd-periodname  {
+  display: inline-block;
+  color: #999;
+  white-space: nowrap;
+
+  top: 100px;
+  position: absolute;  /* must take it out of the flow as the css rotation doesn change the box model*/
+                       /* http://stackoverflow.com/questions/16301625/rotated-elements-in-css-that-affects-their-parents-height-correctly */
+    
+  -moz-transform-origin: center left;
+  -webkit-transform-origin: center left;
+  -o-transform-origin: center left;
+	
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+#shd-vertrotcontainer  {
+  position: relative;
+}
+
+#shd-periodnum  {
+  color: #999;
+  font-size: 21px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* STUDENT TITLE */
+
+.shd-studentdetail  {
+  border-bottom: 1px solid #ccc;
+}
+
+#shd-studentdetail  {
+  padding-bottom: 10px;
+}
+
+#shd-currentstudentnametitle  {
+  color: #349bc8;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#shd-studentswitchstepper  {
+  display: table-row;
+  margin-bottom: 10px;
+}
+
+#shd-studentstepleft  {
+  display: table-cell;
+  background: url(/core/res/img/sched.studentdetail.left.png) center no-repeat;
+  cursor: pointer;
+}
+
+#shd-studentstepright  {
+  display: table-cell;
+  background: url(/core/res/img/sched.studentdetail.right.png) center no-repeat;
+  cursor: pointer;
+}
+
+#shd-studentstepinfo  {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 120px;
+}
+
+#shd-stepinfo  {
+  margin-left: auto;
+  margin-right: auto;
+  width: 65px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+/* STUDENT DATA */
+
+#shd-studentdata  {
+  padding: 10px;
+  font-size: 13px;
+}
+
+#shd-studentdata  p {
+  padding-bottom: 10px;
+}
+
+#shd-currentname  {
+  font-weight: bold;
+}
+
+#shd-currentlessonname  {
+  text-indent: 5px;
+}
+
+.shd-alertdefinition {
+  display: inline-block;
+}
+
+
+/* STUDENT ALERTS */
+#shd-studentalerts   {
+  padding: 10px;
+}
+
+#shd-studentalerts  dl dd{
+  font-size: 15px;
+  color: #666;
+  font-weight: bold;
+
+}
+
+#shd-sendmessagebutton {
+  text-decoration: none;
+  color: #666;
+}
+
+#shd-interventionalert {
+  background: url(/core/res/img/icon.student-detail.intervention.inactive.20x20.svg) center no-repeat;
+}
+
+#shd-PLPalert {
+  background: url(/core/res/img/icon.student-detail.PLP.active.20x20.svg) center no-repeat;
+}
+
+#shd-sendmessage {
+  background: url(/core/res/img/icon.student-detail.messaging.active.20x20.svg) center no-repeat;
+}
+
+.shd-newline {
+  display:block;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  
+}
+
+/* STUDENT MISC DATA */
+
+#shd-studentdatamisc   {
+  padding: 10px;
+  font-size: 11px;
+}
+
+.shd-miscdatatitle   {
+  display: inline-block;
+
+}
+
+.shd-miscdefinition   {
+  display: inline-block;
+}
+
+#shd-gradedef   {
+  font-weight: bold;
+}
+
+.shd-newlinebr   {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+/* STUDENT MISC DATA */
+
+#shd-studentprogress   {
+  padding: 10px;
+  font-size: 10px;
+  color: #999;
+  font-weight: bold;
+}
+
+
+/* STUDENT PROGRESS BAR */
+.shd-progressbarbg   {
+  background-color: #efefef;
+  border-radius: 5px;
+  height: 20px;
+  overflow: hidden;
+  margin-bottom: 3px;
+}
+
+.shd-barprogressbase   {
+  height: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+  text-indent: 5px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  width: 0%;
+}
+
+.shd-barprogress1   {
+  background-color: #00ccff;
+
+}
+
+.shd-barprogress2   {
+  background-color: #ff999a;
+}
+
+
+/* STUDENT LIST VIEW */
+
+#shd-eventstudents  {
+  display: table-cell;
+  height: 100%;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+#shd-studentscoursetitle {
+  color: #349bc8;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+  text-indent: 10px;
+  line-height: 30px;
+  vertical-align: middle;
+  height: 29px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.shd-studentlistitem {
+  border-bottom: 1px solid #e5e5e5;
+  height: 37px;
+  line-height: 37px;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+li.shd-studentlistitem:hover {
+  background: #eeeeee;
+}
+
+.shd-studentlistitemselected {
+  background: #eeeeee;
+}
+
+.shd-picholder {
+
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-indent: 100%;
+  border-radius: 5px;
+  border: 2px solid #6bc901;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: visible;
+  background-size: 100% auto;
+
+  position: relative;
+  
+
+}
+
+.shd-studentname {
+  display: inline-block;
+  color: #666;
+  text-indent: 10px;
+  font-size: 13px;
+}
+
+.shd-studentalertbase {
+  right: -5px;
+  top: -5px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.shd-studentalertplp {
+  background: #fff url(/core/res/img/icon.student-detail.PLP.active.20x20.svg) center no-repeat;
+}
+
+.shd-studentalertinvervention {
+  background: #fff url(/core/res/img/icon.student-detail.intervention.active.20x20.svg) center no-repeat;
+}
+
+.blank {
+
+}
+
+
+
+/* STUDENT CLASS VIEW */
+.shd-classviewbasebox {
+  border-radius: 5px;
+  display: block;
+  color: #666;
+  text-decoration: none;
+  background: rgba(179, 222, 231, .5); 
+  border: 1px solid #b3dee7;
+  padding: 5px;
+}
+
+.shd-classviewsubgroupbox {
+  background: #f6e595; 
+  border: none;
+}
+
+.shd-studentlistul {
+  margin-left: 10px;
+  padding-top: 10px;
+
+}
+
+.shd-studentitemli {
+  display: inline-block;
+  text-align: center;
+  margin-right: 10px;
+  overflow: visible;
+}
+
+.shd-classviewbasebox  h4{
+  color: #999;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.shd-studentnameclassview {
+  display: block;
+  color: #666;
+  text-align: center;
+  font-size: 10px;
+}
+
+.shd-studentitem {
+  display: inline-block;
+  height: 60px;
+  width: 50px;
+  -moz-user-select:none;
+  -khtml-user-drag: element;
+  cursor: move;
+}
+
+.shd-picholderclassview {
+  width: 42px;
+  height: 42px;
+}
+
+.shd-newsubgroup {
+  border-radius: 5px;
+  width: 66px;
+  height: 66px;
+  background: #ccc;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  vertical-align:top;
+}
+
+.shd-newgroupnew{
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.shd-newgroupplus {
+  margin-top: -5px;
+  font-size: 32px;
+}
+
+
+/* ROLLCALL LIST VIEW */
+
+.shd-rollcalltitle {
+  display: inline-block;
+  color: #349bc8;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: left;
+  text-indent: 10px;
+  line-height: 30px;
+  vertical-align: middle;
+  height: 30px;
+}
+
+.shd-rollcallcourse {
+  color: #999;
+}
+
+.shd-rollcalltable  {
+  width: 100%;
+}
+
+.shd-rollcalltable  td , .shd-rollcalltable  th {
+  border-bottom: 1px solid #e5e5e5;
+  height: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.shd-rollcalltableheader  {
+  color: #999;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: middle;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: center;
+}
+
+
+
+.shd-picinfo  {
+  padding-left: 15px;
+}
+
+.shd-picinfo  div {
+  margin-top: 4px;
+}
+
+.shd-picinfo  p {
+  margin-bottom: 7px;
+}
+
+.shd-rollcalltablecol1  {
+  width: 40%;
+  text-align: left !important;
+}
+
+.shd-rollcalltablecol2  {
+  width: 10%;
+}
+
+.shd-rollcalltablecol3  {
+  width: 10%;
+}
+
+.shd-rollcalltablecol4  {
+  width: 10%;
+}
+
+.shd-rollcalltablecol5  {
+  width: 10%;
+}
+
+.shd-rollcalltablecol6  {
+  width: 10%;
+}
+
+.shd-rollcalltablecol7  {
+  width: 10%;
+}
+
+.shd-rollcallfirstheadercol  {
+  text-align: left !important;
+}
+
+
+.shd-studentlate {
+  background: url(/core/res/img/icon.attendance.tardy.red.22x22.svg) center no-repeat;
+}
+
+.shd-studentnotlate {
+  background: url(/core/res/img/icon.attendance.tardy.grey.22x22.svg) center no-repeat;
+  opacity: 0.5;
+}
+
+.shd-studentpresent {
+  background: url(/core/res/img/icon.rollcall.check.green.22x22.svg) center no-repeat;
+}
+
+.shd-studentnotpresent {
+  background: url(/core/res/img/icon.rollcall.grey.22x22.svg) center no-repeat;
+}
+
+.shd-studentabsent {
+  background: url(/core/res/img/icon.rollcall.check.red.22x22.svg) center no-repeat;
+}
+
+.shd-studentnotabsent {
+  background: url(/core/res/img/icon.rollcall.grey.22x22.svg) center no-repeat;
+}
+
+.shd-studentearlyout {
+  background: url(/core/res/img/icon.attendance.early-out.grey.22x22.svg) center no-repeat;
+}
+
+.shd-studentnotearlyout {
+  background: url(/core/res/img/icon.attendance.early-out.grey.22x22.svg) center no-repeat;
+  opacity: 0.5;
+}
+
+
+
+.shd-studentexcused {
+  background: url(/core/res/img/icon.rollcall.check.green.22x22.svg) center no-repeat;
+}
+
+.shd-studentnotexcused {
+  background: url(/core/res/img/icon.rollcall.X.red.22x22.svg) center no-repeat;
+}
+
+
+.shd-studentnote {
+  background: url(/core/res/img/icon.note.scheduler.25x25.svg) center no-repeat;
+  cursor: pointer;
+}
+
+.shd-studentnotnote {
+  background: url(/core/res/img/icon.note.scheduler.25x25.svg) center no-repeat;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+
+/* CLO LIST*/
+
+#shd-clotitle {
+  color: #999;
+  font-weight: bold;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.shd-cloitemname {
+  float: left;
+  width: 110;
+  vertical-align: middle;
+  height: 28px;
+  line-height: 28px;
+  text-indent: 35px;
+  font-size: 12px;
+  color: #999;
+  background: url(/core/res/img/CLOlistitem.png) no-repeat;
+  background-position: 10px center;
+}
+
+.shd-cloapplybutton {
+  float: left;
+  display: none;
+}
+
+/* To make upon parent hover child visible: http://stackoverflow.com/questions/5061940/changing-the-child-elements-css-when-the-parent-is-hovered-with-jquery*/
+#shd-eventclopanel ul li:hover .shd-cloapplybutton { 
+  display: inherit; 
+}
+
+#shd-eventclopanel ul li:hover  { 
+  background: #eee;
+}
+
+.shd-cloapplybuttonholder {
+  display: inline-block;
+  width: 70px;
+  height: 28px;
+  position: relative;
+  left: 15px;
+  top: 6px;
+}
+
+
+/* DRAG AND DROP: http://www.html5rocks.com/en/tutorials/dnd/basics/ */
+
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+
+.bin {
+min-height: 150px;
+min-width: 150px;
+float: left;
+border: 1px solid red;
+padding: 20px;
+}
+
+.item {
+min-height: 150px;
+min-width: 150px;
+background: blue;
+float: right;
+}

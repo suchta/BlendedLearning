@@ -1,0 +1,63 @@
+       <link rel="stylesheet" href="apps/Dashboard/css/default.css">
+ 
+       
+        <div id="bls-content">
+          <div id="bls-note">
+            <ul class="bls-notesul">
+              <li id="bls-notestitle">
+                <p>NOTE</p>
+                <a href="" onclick="openNotesDialog()">close</a>
+              </li>
+              <li id="bls-notesformli">
+              <form id="bls-notesform" name="note" action="#" method="get">     
+                <table id="bls-notestable">
+                  <tbody><tr>
+                    <th id="bls-goals">GOALS</th>
+                    <th class="bls-current">current</th>
+                    <th class="bls-new">new</th>
+                  </tr>
+                  <tr ng-repeat="data in tabData">
+                    <td class="bls-notecol1">{{data[0]}}</td>
+                    <td class="bls-notecol2">{{data[1]}}</td>
+                    <td class="bls-notecol3"><input type="text" name="new" ng-model="data[1]" ></td>
+                  </tr>
+                </tbody></table>
+                <a class="bls-noteformsubmit bls-buttonmedium bls-grassgreenbutton" href="" onclick="openGoalsDialog()">APPLY</a>
+              </form>
+              </li>
+
+            </ul>
+          </div>
+          
+  
+          
+          <div id="bls-modules">
+            <ul>
+            
+              <!-- MAIN MODULES -->
+              <li ng-repeat="data in tabModules">
+                <div class="bls-modulelistitem ">
+                  <p class="bls-moduletitle {{isSubModuleTitle(data.type)}}">{{data.title +alertstext(data.alerts)}}</p>
+                  <p class="bls-modulealert" style="{{isHiddenStyle(data.alerts)}}"></p>
+                  <p class="bls-modulemiscinfo">{{data.events}}</p>
+                  <p class="bls-chatbutton" style="{{isHiddenStyle(data.messages)}}">chat</p>
+                  <p class="bls-modulelinkcell"> <label for="moduledetailcheckbox{{$index}}" class="{{isSubModuleDetailButton(data.type)}}">DETAILS</label> </p>
+                </div>
+                
+                      <input type="checkbox" id="moduledetailcheckbox{{$index}}" class="moduledetailtoggle_charts">  <!-- MUST BE NEXT SIBLING TO THE DIV IT WILL OPEN -->
+                      <div class="bls-moduledetaildata">   
+                                             
+                        <db_popupmenu class="popoupmenu"></db_popupmenu><!--dashboard popup dropdown menu holder-->
+                        <div ng-repeat="chart in charts">
+                            <div dashboardchart chart="chart" class="chart_item"></div>
+                        </div>
+                
+                      </div> 
+  
+              </li>   
+
+            </ul>
+          </div>
+          
+          
+        </div>

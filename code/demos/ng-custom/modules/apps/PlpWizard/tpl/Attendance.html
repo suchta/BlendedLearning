@@ -1,0 +1,71 @@
+<div id="bls-content">
+          <div id="bls-note">
+            <ul class="plp-mainnavbarul">
+              <li id="bls-notestitle">NOTE</li>
+              <li id="bls-notesformli">
+              <form id="bls-notesform" name="note" action="#" method="get">     
+                <table id="bls-notestable">
+                  <tbody><tr>
+                    <th id="bls-goals">GOALS</th>
+                    <th class="bls-current">current</th>
+                    <th class="bls-new">new</th>
+                  </tr>
+                  <tr ng-repeat="goal in plpData.tabData.Attendance.goals">
+                    <td class="bls-notecol1">{{goal[1]}}</td>
+                    <td class="bls-notecol2">{{goal[2]}}</td>
+                    <td class="bls-notecol3"><input type="text" name="new" value="{{goal[3]}}"></td>
+                  </tr>
+                </tbody></table>
+                <a class="bls-noteformsubmit bls-buttonmedium bls-grassgreenbutton" href="" onclick="openDialog()">APPLY</a>
+              </form>
+              </li>
+
+            </ul>
+          </div>
+          <div id="plp-modules">
+            <ul>
+              <li>
+                <div class="plp-modulelistitem">
+                  <p class="plp-moduletitle">Geometry Part 1</p>
+                  <p class="plp-modulemiscinfo">Maximum %</p>
+                  <p class="plp-modulelinkcell"> <label for="moduledetailcheckbox1" class="bls-buttonsmall bls-greenbutton2 plp-moduledetailslink">DETAILS</label> </p>
+                </div>
+                <input type="checkbox" id="moduledetailcheckbox1" class="moduledetailtoggle">
+                <div class="plp-moduledetaildata"></div> 
+              </li>
+              <li>
+                <div class="plp-modulelistitem">
+                  <p class="plp-moduletitle"> World Literature Part 1</p>
+                  <p class="plp-modulelinkcell"> <label for="moduledetailcheckbox2" class="bls-buttonsmall bls-greenbutton2 plp-moduledetailslink">DETAILS</label> </p>
+                </div>
+                <input type="checkbox" id="moduledetailcheckbox2" class="moduledetailtoggle">
+                <div class="plp-moduledetaildata"></div> 
+              </li>
+              <li>
+                <div class="plp-modulelistitem">
+                  <p class="plp-moduletitle">Biology Part 1</p>
+                  <p class="plp-modulemiscinfo">Minimum Falls %</p>
+                  <p class="plp-modulelinkcell"> <label for="moduledetailcheckbox3" class="bls-buttonsmall bls-greenbutton2 plp-moduledetailslink">DETAILS</label> </p>
+                </div>
+                <input type="checkbox" id="moduledetailcheckbox3" class="moduledetailtoggle">
+                <div class="plp-moduledetaildata"></div> 
+              </li>
+              <li>
+                <div class="plp-modulelistitem">
+                  <p class="plp-moduletitle">World History Part 1</p>
+                  <p class="plp-modulelinkcell"> <label for="moduledetailcheckbox4" class="bls-buttonsmall bls-greenbutton2 plp-moduledetailslink">DETAILS</label> </p>
+                </div>
+                <input type="checkbox" id="moduledetailcheckbox4" class="moduledetailtoggle">
+                <div class="plp-moduledetaildata"></div> 
+              </li>
+              <li>
+                <div class="plp-modulelistitem">
+                  <p class="plp-moduletitle">Psychology Part 1</p>
+                  <p class="plp-modulelinkcell"> <label for="moduledetailcheckbox5" class="bls-buttonsmall bls-greenbutton2 plp-moduledetailslink">DETAILS</label> </p>
+                </div>
+                <input type="checkbox" id="moduledetailcheckbox5" class="moduledetailtoggle">
+                <div class="plp-moduledetaildata"></div> 
+              </li> 
+            </ul>
+          </div>
+        </div>

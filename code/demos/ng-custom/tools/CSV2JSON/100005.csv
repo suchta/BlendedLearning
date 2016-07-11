@@ -1,0 +1,41 @@
+firstName,First Name,Charles
+lastName,Last Name,Wong
+middleInitial,Middle Initial,"E,"
+,,
+suffix,Suffix,n/a
+nickname,"""Nickname""",Chuck
+age,Age,15
+,,
+studentId,Student Id,100005
+schools,Schools,Mesa High School
+familyId,Family Id,948
+,,
+username,Username,test
+password,Password,test
+,,
+gender,Gender,Male
+dateOfBirth,D.O.B,3/8/98
+somefield,somefield,Male
+,,
+status,Active,Active
+email,Email,c.wong@tmail.com
+timezone,Timezone,"(GMT -7, DST) Mountain"
+,,
+country,Country,United States of America
+schoolDistrict,School District,New Mexico District
+studentRole,Student Role,Tutor
+,,
+gradeLevel,Grade Level,9th Grade
+gradeLevelStartDate,Grade Level Start,9/5/09
+geniusUsername,Genius Username,test
+,,
+,,
+startDate,9/16/13,
+endDate,9/30/13,
+imageUrl,/core/res/img/sp100005.png,
+topData,2013,School Year
+topData,Mesa High School,School Name
+topData,9th Grade,Grade Level
+topData,(857) 555-4738,Parent's cell
+,,
+isMeetingGoals,TRUE,

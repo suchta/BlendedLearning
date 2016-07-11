@@ -1,0 +1,640 @@
+{
+	"Attendance": {
+		"alertCount": 0,
+		"notes": "",
+		"goals": [
+			["maximumTardies", "Maximum Tardies", 2, null,""],
+			["maximumAbsences", "Maximum Absences", 1, null,""]
+		],
+		"details": [
+			{
+				"title": "Daily System Attendance",
+				"type": "top", 
+				"children": [
+					{
+						"title": "System Module 1",
+						"hasMessageBubble": false,
+						"type": "sub",
+						"hasAlert": false,
+						"alertMessage": "",
+						"children": [
+							{
+								"type": "table",
+								"columns": 4,
+								"data": [
+									["Unexcused Absence", 0],
+									["Unexcused Tardy", 0],
+									["Unexcused Early Out", 0],
+									["Attended", 7],
+									["Excused Absence", 0],
+									["Excused Tardy", 0],
+									["Excused Early Out", 0],
+									["BLSCalendar", "SUB MODULE CLASS ATTENDANCE"]
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "Class Attendance",
+				"alertCount": 0,
+				"type": "top", 
+				"children": [
+					{
+						"title": "Calculus Part 1",
+						"hasMessageBubble": false,
+						"alertCount": 0,
+						"type": "sub",
+						"hasAlert": false,
+						"alertMessage": "",
+						"children": [
+							{
+								"type": "table",
+								"columns": 4,
+								"data": [
+									["Unexcused Absence", 0],
+									["Unexcused Tardy", 0],
+									["Unexcused Early Out", 0],
+									["Attended", 7],
+									["Excused Absence", 0],
+									["Excused Tardy", 0],
+									["Excused Early Out", 0],
+									["BLSCalendar", "TEST CLASS ATTENDANCE"]
+								]
+							}
+						]
+					},
+					{
+						"title": "World Literature Part 2",
+ 						"hasMessageBubble": false,
+						"alertCount": 0,
+						"type": "sub",
+						"hasAlert": false,
+						"alertMessage": "",
+						"children": [
+							{
+								"type": "table",
+								"columns": 4,
+								"data": [
+									["Unexcused Absence", 0],
+									["Unexcused Tardy", 0],
+									["Unexcused Early Out", 0],
+									["Attended", 7],
+									["Excused Absence", 0],
+									["Excused Tardy", 0],
+									["Excused Early Out", 0],
+									["BLSCalendar", "TEST CLASS ATTENDANCE"]
+								]
+							}
+						]
+					},
+					{
+						"title": "Physics Part 1",
+ 						"hasMessageBubble": false,
+						"alertCount": 0,
+						"type": "sub",
+						"hasAlert": false,
+						"alertMessage": "",
+						"children": [
+							{
+								"type": "table",
+								"columns": 4,
+								"data": [
+									["Unexcused Absence", 0],
+									["Unexcused Tardy", 0],
+									["Unexcused Early Out", 0],
+									["Attended", 7],
+									["Excused Absence", 0],
+									["Excused Tardy", 0],
+									["Excused Early Out", 0],
+									["BLSCalendar", "TEST CLASS ATTENDANCE"]
+								]
+							}
+						]
+					},
+					{
+						"title": "European History Part 1",
+						"hasMessageBubble": false,
+						"alertCount": 0,
+						"type": "sub",
+						"hasAlert": false,
+						"alertMessage": "",
+						"children": [
+							{
+								"type": "table",
+								"columns": 4,
+								"data": [
+									["Unexcused Absence", 0],
+									["Unexcused Tardy", 0],
+									["Unexcused Early Out", 0],
+									["Attended", 7],
+									["Excused Absence", 0],
+									["Excused Tardy", 0],
+									["Excused Early Out", 0],
+									["BLSCalendar", "TEST CLASS ATTENDANCE"]
+								]
+							}
+						]
+					},
+					{
+						"title": "Psychology Part 2",
+						"hasMessageBubble": false,
+						"alertCount": 0,
+						"type": "sub",
+						"hasAlert": false,
+						"alertMessage": "",
+						"children": [
+							{
+								"type": "table",
+								"columns": 4,
+								"data": [
+									["Unexcused Absence", 0],
+									["Unexcused Tardy", 0],
+									["Unexcused Early Out", 0],
+									["Attended", 7],
+									["Excused Absence", 0],
+									["Excused Tardy", 0],
+									["Excused Early Out", 0],
+									["BLSCalendar", "TEST CLASS ATTENDANCE"]
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"Performance": {
+		"alertCount": 0,
+		"notes": "",
+		"goals": [
+			["maximumFinalGrade", "Maximum Final Grade", "70%", null,""],
+			["minimumGradeToDate", "Minimum Grade to Date", "75%", null,""],
+			["minimumMinutesInCourse", "Minimum Minutes in Course", "2,500", null,""],
+			["minimumDailyProgress", "Minimum Daily Progress", "400", null,""],
+			["minimumCourseCompleteByDate", "Minimum Course Complete by Date", "2", null,""],
+			["minimumDiagnosticScores", "Minimum Diagnostic Scores", "37%", null,""]
+		],
+		"details": [
+			{
+				"title": "Calculus Part 1",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 4,
+						"data": [
+							["Current Grade", "100%"],
+							["Minutes in Course to Date", "2,500"],
+							["Lesson Complete to Date", "50"],
+							["% to Course Complete to Date", "40%"],
+							["Grade in the Last Week", "95%"],
+							["Minutes in Course in Last Week", "120"],
+							["Lesson Complete to Last Week", "10"],
+							["% to Course Completed in Last Week", "5%"],
+							["Grade in the Last Day", "100%"],
+							["Minutes in Course in Last Day", "60"],
+							["Lesson Complete to Last Day", "5"],
+							["% to Course Completed in Last Day", "90%"]
+						]
+					}
+				]
+			},
+			{
+				"title": "World Literature Part 2",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 4,
+						"data": [
+							["Current Grade", "100%"],
+							["Minutes in Course to Date", "2,500"],
+							["Lesson Complete to Date", "50"],
+							["% to Course Complete to Date", "40%"],
+							["Grade in the Last Week", "95%"],
+							["Minutes in Course in Last Week", "120"],
+							["Lesson Complete to Last Week", "10"],
+							["% to Course Completed in Last Week", "5%"],
+							["Grade in the Last Day", "100%"],
+							["Minutes in Course in Last Day", "60"],
+							["Lesson Complete to Last Day", "5"],
+							["% to Course Completed in Last Day", "90%"]
+						]
+					}
+				]
+			},
+			{
+				"title": "Physics Part 1 Part 1",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 4,
+						"data": [
+							["Current Grade", "100%"],
+							["Minutes in Course to Date", "2,500"],
+							["Lesson Complete to Date", "50"],
+							["% to Course Complete to Date", "40%"],
+							["Grade in the Last Week", "95%"],
+							["Minutes in Course in Last Week", "120"],
+							["Lesson Complete to Last Week", "10"],
+							["% to Course Completed in Last Week", "5%"],
+							["Grade in the Last Day", "100%"],
+							["Minutes in Course in Last Day", "60"],
+							["Lesson Complete to Last Day", "5"],
+							["% to Course Completed in Last Day", "90%"]
+						]
+					}
+				]
+			},
+			{
+				"title": "European History Part 1",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 4,
+						"data": [
+							["Current Grade", "100%"],
+							["Minutes in Course to Date", "2,500"],
+							["Lesson Complete to Date", "50"],
+							["% to Course Complete to Date", "40%"],
+							["Grade in the Last Week", "95%"],
+							["Minutes in Course in Last Week", "120"],
+							["Lesson Complete to Last Week", "10"],
+							["% to Course Completed in Last Week", "5%"],
+							["Grade in the Last Day", "100%"],
+							["Minutes in Course in Last Day", "60"],
+							["Lesson Complete to Last Day", "5"],
+							["% to Course Completed in Last Day", "90%"]
+						]
+					}
+				]
+			},
+			{
+				"title": "Psychology Part 2",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 4,
+						"data": [
+							["Current Grade", "95%"],
+							["Minutes in Course to Date", "2,090"],
+							["Lesson Complete to Date", "37"],
+							["% to Course Complete to Date", "26%"],
+							["Grade in the Last Week", "89%"],
+							["Minutes in Course in Last Week", "120"],
+							["Lesson Complete to Last Week", "6"],
+							["% to Course Completed in Last Week", "8%"],
+							["Grade in the Last Day", "85%"],
+							["Minutes in Course in Last Day", "120"],
+							["Lesson Complete to Last Day", "2"],
+							["% to Course Completed in Last Day", "3%"]
+						]
+					}
+				]
+			}
+		]
+	},
+	"ModesOfLearning": {
+		"alertCount": 0,
+		"notes": "",
+		"goals": [
+			["goalName", "Minimum Foundational Completion %", "80", null,"%"],
+			["goalName", "Minimum Collaborative Completion %", "80", null,"%"],
+			["goalName", "Minimum Conceptual Completion %", "80", null,"%"],
+			["goalName", "Minimum Personal Completion %", "80", null, "%"],
+			["goalName", "Tutoring Concept Mastery %", "80", null,"%"]
+		],
+		"details": [
+			{
+				"title": "Calculus Part 1",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"columns": 4,
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "chart",
+						"data": [
+							"just make this a static chart JPEG for now..."
+						]
+					}
+				]
+			},
+			{
+				"title": "World Literature Part 2",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"columns": 4,
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "chart",
+						"data": [
+							"just make this a static chart JPEG for now..."
+						]
+					}
+				]
+			},
+			{
+				"title": "Physics Part 1",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"columns": 4,
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "chart",
+						"data": [
+							"just make this a static chart JPEG for now..."
+						]
+					}
+				]
+			},
+			{
+				"title": "European History, Part 1",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"columns": 4,
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "chart",
+						"data": [
+							"just make this a static chart JPEG for now..."
+						]
+					}
+				]
+			},
+			{
+				"title": "Psychology Part 2",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"columns": 4,
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "chart",
+						"data": [
+							"just make this a static chart JPEG for now..."
+						]
+					}
+				]
+			}
+		]
+	},
+	"Intervention": {
+		"alertCount": 1,
+		"notes": "",
+		"goals": [
+			["goalName", "Maximum % of intervention cleared", "75%", null,""],
+			["goalName", "Maximum number of assessment failure on same standard", "25%", null,""]
+		],
+		"details": [
+			{
+				"title": "Calculus Part 1",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 2,
+						"data": [
+							["Number of Interventions Triggered for the Course", "0"],
+							["Number of Currently Outstanding Interventions for the Course", "2"],
+							["Number of Interventions Cleared in the Course", "0"],
+							["% of Interventions Cleared in the Course", "100%"]
+						]
+					}
+				]
+			},
+			{
+				"title": "World Literature Part 2",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"columns": 4,
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 2,
+						"data": [
+							["Number of Interventions Triggered for the Course", "0"],
+							["Number of Currently Outstanding Interventions for the Course", "2"],
+							["Number of Interventions Cleared in the Course", "0"],
+							["% of Interventions Cleared in the Course", "100%"]
+						]
+					}
+				]
+			},
+			{
+				"title": "Physics Part 1",
+				"hasMessageBubble": true,
+				"alertCount": 1,
+				"type": "sub",
+				"columns": 4,
+				"hasAlert": true,
+				"alertMessage": "Minimum Fails",
+				"children": [
+					{
+						"type": "table",
+						"columns": 2,
+						"data": [
+							["Number of Interventions Triggered for the Course", "10"],
+							["Number of Currently Outstanding Interventions for the Course", "10"],
+							["Number of Interventions Cleared in the Course", "0"],
+							["% of Interventions Cleared in the Course", "0%"]
+						]
+					}
+				]
+			},			{
+				"title": "European History Part 1",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"columns": 4,
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 2,
+						"data": [
+							["Number of Interventions Triggered for the Course", "0"],
+							["Number of Currently Outstanding Interventions for the Course", "2"],
+							["Number of Interventions Cleared in the Course", "0"],
+							["% of Interventions Cleared in the Course", "100%"]
+						]
+					}
+				]
+			},			{
+				"title": "Psychology Part 2",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"columns": 4,
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 2,
+						"data": [
+							["Number of Interventions Triggered for the Course", "0"],
+							["Number of Currently Outstanding Interventions for the Course", "2"],
+							["Number of Interventions Cleared in the Course", "0"],
+							["% of Interventions Cleared in the Course", "100%"]
+						]
+					}
+				]
+			}
+		]
+	},
+	"Checklist": {
+		"alertCount": 0,
+		"goals": [
+			["goalName", "Minimum 7 Day Progress", "100%", null,""],
+			["goalName", "Complete a given course by given date (outside of PLP period logic)", "100%", null,""]
+		],
+		"details": [
+			{
+				"title": "Calculus Part 1",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 3,
+						"data": [
+							["Assignments Completed", "100%"],
+							["Goal Assignments", "100%"],
+							["Goal Number of assessments and grade average per course for next 10 day period", "95%"]
+						]
+					}
+				]
+			},
+			{
+				"title": "World Literature Part 2",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"columns": 4,
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 3,
+						"data": [
+							["Assignments Completed", "100%"],
+							["Goal Assignments", "100%"],
+							["Goal Number of assessments and grade average per course for next 10 day period", "95%"]
+						]
+					}
+				]
+			},
+			{
+				"title": "Physics Part 1",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"columns": 4,
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 3,
+						"data": [
+							["Assignments Completed", "100%"],
+							["Goal Assignments", "100%"],
+							["Goal Number of assessments and grade average per course for next 10 day period", "95%"]
+						]
+					}
+				]
+			},
+			{
+				"title": "European History Part 1",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"columns": 4,
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 3,
+						"data": [
+							["Assignments Completed", "100%"],
+							["Goal Assignments", "100%"],
+							["Goal Number of assessments and grade average per course for next 10 day period", "95%"]
+						]
+					}
+				]
+			},
+			{
+				"title": "Psychology Part 2",
+				"hasMessageBubble": false,
+				"alertCount": 0,
+				"type": "sub",
+				"columns": 4,
+				"hasAlert": false,
+				"alertMessage": "",
+				"children": [
+					{
+						"type": "table",
+						"columns": 3,
+						"data": [
+							["Assignments Completed", "100%"],
+							["Goal Assignments", "100%"],
+							["Goal Number of assessments and grade average per course for next 10 day period", "95%"]
+						]
+					}
+				]
+			}
+		]
+	}
+}

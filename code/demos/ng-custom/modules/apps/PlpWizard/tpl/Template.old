@@ -1,0 +1,69 @@
+        <div id="bls-content">
+          <div id="bls-note">
+            <ul class="bls-notesul">
+              <li id="bls-notestitle">
+                <p>NOTE</p>
+                <a href="" onclick="openNotesDialog()">close</a>
+              </li>
+              <li id="bls-notesformli">
+              <form id="bls-notesform" name="note" action="#" method="get">     
+                <table id="bls-notestable">
+                  <tbody><tr>
+                    <th id="bls-goals">GOALS</th>
+                    <th class="bls-current">current</th>
+                    <th class="bls-new">new</th>
+                  </tr>
+                  <tr ng-repeat="data in tabData">
+                    <td class="bls-notecol1">{{data[0]}}</td>
+                    <td class="bls-notecol2">{{data[1]}}</td>
+                    <td class="bls-notecol3"><input type="text" name="new"></td>
+                  </tr>
+                </tbody></table>
+                <a class="bls-noteformsubmit bls-buttonmedium bls-grassgreenbutton" href="" onclick="openGoalsDialog()">APPLY</a>
+              </form>
+              </li>
+
+            </ul>
+          </div>
+          <div id="bls-modules">
+            <ul>
+
+            
+            
+              <li>
+                <div class="bls-modulelistitem">
+                  <p class="bls-moduletitle bls-mainmoduletitle">MAIN MODULE TITLE</p>
+                  <p class="bls-modulealert">alert</p>
+                  <p class="bls-modulelinkcell"> <label for="moduledetailcheckbox1" class="bls-mainmoduledetailslink">DETAILS</label> </p>
+                </div>
+                <input type="checkbox" id="moduledetailcheckbox1" class="mainmoduledetailtoggle">
+                <div> 
+                
+                  <div class="bls-modulelistitem bls-submodulelistitem">
+                    <p class="bls-moduletitle bls-submoduletitle">Sub Module Title</p>
+                    <p class="bls-modulealert">alert</p>
+                    <p class="bls-modulemiscinfo">Event</p>
+                    <p class="bls-chatbutton">chat</p>
+                    <p class="bls-modulelinkcell"> <label for="moduledetailcheckbox2" class="bls-buttonsmall bls-greenbutton2 bls-moduledetailslink">DETAILS</label> </p>
+                  </div>
+                <input type="checkbox" id="moduledetailcheckbox2" class="moduledetailtoggle">
+                <div class="bls-moduledetaildata"> <a class="bls-calendarbutton" href="" onclick="openCalendarDialog()">calendar</a></div> 
+                
+                </div> 
+              </li>
+              
+              
+              <li>
+                <div class="bls-modulelistitem">
+                  <p class="bls-moduletitle bls-submoduletitle">Orphan Sub Module Title</p>
+                  <p class="bls-modulealert">alert</p>
+                  <p class="bls-modulemiscinfo">Event</p>
+                  <p class="bls-chatbutton">chat</p>
+                  <p class="bls-modulelinkcell"> <label for="moduledetailcheckbox3" class="bls-buttonsmall bls-greenbutton2 bls-moduledetailslink">DETAILS</label> </p>
+                </div>
+                <input type="checkbox" id="moduledetailcheckbox3" class="moduledetailtoggle">
+                <div class="bls-moduledetaildata"> <a class="bls-calendarbutton" href="" onclick="openCalendarDialog()">calendar</a></div> 
+              </li>
+            </ul>
+          </div>
+        </div>

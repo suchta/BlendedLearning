@@ -1,0 +1,82 @@
+<div class="bls-header">
+  <div class="bls-title">
+	<h1 class="bls-titleheader plp-titleheader"> PERSONAL LEARNING PLAN </h1>
+    <div id="bls-closeappholder"><a id="bls-closeapp" href="#">close</a></div>
+  </div>
+  <div id="bls-studentData">
+	<div id="bls-nameinfo">
+	  <div id="bls-name">
+		<select
+			name="Students"
+			ng-model="plp"
+			ng-options="p.display for p in plpList"
+		>
+			<option value="">SELECT A PLP</option>
+		</select>
+		<!--
+		<select name="Students">
+		  <option value="1">Todd Mac</option>
+		  <option value="2">Jonny Morill</option>
+		  <option value="3">Martin Kelemen</option>
+		  <option value="4">Angel Berger</option>
+		</select>
+		-->
+	  </div>
+	  <div id="bls-info" ng-show="plp">
+		<div id="bls-infodetail">
+		 <label for="studentdetailcheckbox" class="bls-buttonsmall bls-greybutton"> DETAIL </label>
+		</div>
+		<div id="bls-infoschool">
+          <ul>
+	   		<li title="{{data[1]}}: {{data[0]}}" ng-repeat="data in plpData.topData">{{data[0]}}</li>
+          </ul>
+          
+      
+        </div>
+	  </div>
+	</div>
+	
+	
+	<div id="bls-picdate" ng-show="plp">
+	  <div id="bls-pic" class="bls-studentimage">
+		<img src="{{plpData.imageUrl}}" />
+	  </div>
+	  <div id="bls-date">
+		<div id ="bls-periodtable"> 
+		  <p id="bls-period">PLP PERIOD </p>           
+		  <dl class="bls-periodtablerow">
+			<dt class="bls-periodtabledt">START</dt>
+			<dd class="bls-periodtabledd">{{plpData.startDate}}</dd>
+		  </dl>
+		  <dl class="bls-periodtablerow">
+			<dt class="bls-periodtabledt">END</dt>
+			<dd class="bls-periodtabledd">{{plpData.endDate}}</dd>
+		  </dl>
+	   </div>       
+	  </div>
+	</div>
+	
+	
+  </div>
+  
+  <div ng-show="plp">
+	  <input type="checkbox" id="studentdetailcheckbox" class="studentdetailtoggle">
+	  <div id="plp-studentdetaildata">
+		<ul>
+		  <li ng-repeat="detail in plpData.details">
+			<dt>{{detail[1]}}</dt>
+			<dd ng-bind-html-unsafe="detail[2]"></dd>
+		  </li>    
+		</ul> 
+		<a href="" onClick="openGoalsDialog()" class="bls-popupyesno bls-buttonmedium bls-grassgreenbutton">SAVE</a> 
+		<label for="studentdetailcheckbox" class="bls-popupyesno bls-buttonmedium bls-greenbutton">CLOSE</label>
+	  </div> 
+	  <div id="bls-mainnavbar">
+		 <ul class="bls-mainnavbarul" >
+		   <li class="bls-mainnavbaritems plp-mainnavbaritems" ng-repeat="tab in tabs"><a class="bls-navlink {{isCurrentTab(tab.name)}}" href="#/PlpWizard/{{userId}}/{{plpId}}/{{tab.name}}">{{tab.title + tabAlerts(tab.name)}}</a></li>
+		 </ul>
+	  </div>
+  </div>
+
+</div>
+<div id="bls-templatetnclude"class="bls-tabTemplateStyle" ng-include="tabTemplate" ng-show="plp"></div>

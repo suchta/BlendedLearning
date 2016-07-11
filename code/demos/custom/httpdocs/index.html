@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>BLE - Demo</title>
+		<meta name="description" content="">
+		
+		<link href="css/default.css" rel="stylesheet" />
+		
+		<script type="text/javascript" charset="utf-8" src="js/lib/prototype.js"></script>
+		<script type="text/javascript">
+			(function() {
+				
+				var setupLoader = function()
+				{
+					var loader = $('Loader');
+					var d = document.viewport.getDimensions();
+					var w = loader.getWidth();
+					var h = loader.getHeight();
+					loader.setStyle({
+					  visibility: 'visible',
+					  top: Math.ceil((d.height - h)/2) + 'px',
+					  left: Math.ceil((d.width - w)/2) + 'px'
+					});
+				};
+				var handleResize = function(event)
+				{
+					var loader = $('Loader');
+					var d = document.viewport.getDimensions();
+					var w = loader.getWidth();
+					var h = loader.getHeight();
+					loader.setStyle({
+					  top: Math.ceil((d.height - h)/2) + 'px',
+					  left: Math.ceil((d.width - w)/2) + 'px'
+					});
+				};
+				
+				Event.observe(window, 'load', function() {
+					
+					setupLoader();
+					Event.observe(window, 'resize', handleResize);
+					
+					console.log('index.html function');
+					var paramString = window.location.search.substring(1);
+					var params = paramString.toQueryParams();
+					var dataMain = 'js/main.js';
+					var requireJS = 'js/lib/require.js';
+					if('debug' in params) {
+						dataMain = 'js/main.debug.js';
+					}
+					var script = new Element('script', {
+						'type'		:	'text/javascript',
+						'charset'	: 	'utf-8',
+						'src'		: 	requireJS,
+						'data-main'	: 	dataMain
+					});
+					$$('head')[0].insert(script);
+				});
+				
+			}());
+		</script>
+	</head>
+	<body>
+		<div id="Loader" style="visibility:hidden;">
+			<img src="img/Loader/loader.gif" height="32" width="32" />
+		</div>
+	</body>
+</html>

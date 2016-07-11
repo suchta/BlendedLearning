@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
+<g>
+	<circle fill="#FFFFFF" cx="10" cy="9.999" r="10"/>
+	<path fill="#99CC00" d="M14.283,4.297h-2.143v1.071c0,0.354-0.159,0.643-0.355,0.643h-3.57c-0.197,0-0.356-0.288-0.356-0.643V4.297
+		H5.717c-0.473,0-0.856,0.383-0.856,0.857v9.421c0,0.474,0.383,0.856,0.856,0.856h8.566c0.473,0,0.855-0.383,0.855-0.856V5.154
+		C15.139,4.68,14.756,4.297,14.283,4.297z"/>
+	<path fill="#99CC00" d="M11.713,5.154V4.297c0-0.236-0.191-0.428-0.428-0.428H11.26c0.016-0.069,0.025-0.141,0.025-0.214
+		c0-0.591-0.576-1.071-1.285-1.071S8.715,3.063,8.715,3.655c0,0.073,0.009,0.145,0.025,0.214H8.715
+		c-0.237,0-0.429,0.192-0.429,0.428v0.857c0,0.236,0.192,0.428,0.429,0.428h2.57C11.521,5.582,11.713,5.39,11.713,5.154z"/>
+	<g>
+		<rect x="9.572" y="3.44" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" width="0.856" height="0.856"/>
+	</g>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="0.7936" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="7.285" y1="7.77" x2="9.481" y2="9.967"/>
+	
+		<line fill="none" stroke="#FFFFFF" stroke-width="0.7936" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="9.481" y1="7.77" x2="7.285" y2="9.967"/>
+	
+		<circle fill="none" stroke="#FFFFFF" stroke-width="0.7936" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="8.436" cy="12.562" r="1.152"/>
+	
+		<path fill="none" stroke="#FFFFFF" stroke-width="0.7936" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+		M12.305,8.869c0,0-0.926,2.388-2.841,3.149"/>
+	<polygon fill="#FFFFFF" points="13.26,10.423 10.613,8.921 13.275,7.313 	"/>
+</g>
+</svg>

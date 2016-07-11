@@ -1,0 +1,20 @@
+{
+	"name": "ble",
+	"version": "0.1.0",
+	"private": true,
+	"devDependencies": {
+		"grunt": "~0.4",
+		"grunt-cli": "0.1.6",
+		"connect": "~2.7.0",
+		"proxy-middleware": "0.3.2",
+		"express": "~3.1",
+		"open": "0.0.3"
+	},
+	"scripts": {
+		"start": "node ./node_modules/grunt-cli/bin/grunt",
+		"test": "node ./node_modules/grunt-cli/bin/grunt test"
+	},
+	"engines": {
+		"node" : ">=0.8.0"
+	}
+}

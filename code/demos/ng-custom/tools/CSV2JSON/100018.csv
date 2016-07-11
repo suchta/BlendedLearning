@@ -1,0 +1,41 @@
+firstName,First Name,Ryan
+lastName,Last Name,Brogneri
+middleInitial,Middle Initial,K.
+,,
+suffix,Suffix,n/a
+nickname,"""Nickname""",Ryan
+age,Age,15
+,,
+studentId,Student Id,100018
+schools,Schools,Edison High School
+familyId,Family Id,454
+,,
+username,Username,test
+password,Password,test
+,,
+gender,Gender,Male
+dateOfBirth,D.O.B,8/7/98
+somefield,somefield,Male
+,,
+status,Active,Active
+email,Email,ryanb@tmail.com
+timezone,Timezone,"(GMT -5, DST) Eastern"
+,,
+country,Country,United States of America
+schoolDistrict,School District,Pittsburgh Public School District
+studentRole,Student Role,Tutor
+,,
+gradeLevel,Grade Level,9th Grade
+gradeLevelStartDate,Grade Level Start,9/5/10
+geniusUsername,Genius Username,test
+,,
+,,
+startDate,9/16/13,
+endDate,9/30/13,
+imageUrl,/core/res/img/sp100018.png,
+topData,2013,School Year
+topData,Edison High School,School Name
+topData,9th Grade,Grade Level
+topData,(215) 555-9704,Parent's cell
+,,
+isMeetingGoals,TRUE,

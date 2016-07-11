@@ -1,0 +1,23 @@
+body {
+	margin: 0;
+}
+
+#wrapper {
+	height: 800px;
+	margin: 0 auto;
+	padding: 0;
+	min-width: 780px;
+	max-width: 1200px;
+	width: 80%;
+	background: #CCC;
+	position: relative;
+}
+
+/* Loader */
+#Loader {
+	width: 32px;
+	position: fixed;
+}
+#Loader  img{
+	
+}

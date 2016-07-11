@@ -1,0 +1,80 @@
+<div class="bls-header intervention">
+	
+	<div class="bls-title">
+		<h1 class="bls-titleheader intervention-titleheader"> INTERVENTION ASSISTANT </h1>
+		<div id="bls-closeappholder"><a id="bls-closeapp" href="#">close</a></div>
+	</div>
+	
+	<div class="leftColumn">
+	
+		<div class="leftSelect">
+			<select
+				name="Students"
+				ng-model="intervention"
+				ng-options="i.display for i in interventionList"
+				>
+				<option value="">SELECT AN INTERVENTION</option>
+			</select>
+		</div>
+		
+		<div class="leftInfo" ng-show="intervention">
+			<div class="courseName">Course Name</div>
+			<div class="lessonName">Lesson Name</div>
+			<div class="leftBorder"></div>
+			<div class="leftDetails">
+				<div class="detailButton">detail</div>
+				<div class="detailTitle">Assessment Name</div>
+				<div class="detailContent">test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test </div>
+			</div>
+			<div class="leftBorder"></div>
+			<div class="leftDetails">
+				<div class="detailButton">detail</div>
+				<div class="detailTitle">Assessment Name</div>
+				<div class="detailContent">test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test </div>
+			</div>
+			<div class="leftBorder"></div>
+		</div>
+	</div>
+	
+	<div class="rightColumn" ng-show="intervention">
+		<div class="topBar">
+			<ul>
+				<li class="left">CLEAR INTERVENTION</li>
+				<li class="right">ASSIGN</li>
+				<li class="right">CANCEL</li>
+			</ul>
+		</div>
+		<div class="learningObject">
+			<div class="objectLeft">
+				<div class="objectName">Learning Object</div>
+				<div class="objectDetails">details of the learning object</div>
+			</div>
+			<div class="objectAssigned"><input type="checkbox" value="0" /></div>
+			<div class="clear"></div>
+		</div>
+		<div class="learningObject">
+			<div class="objectLeft">
+				<div class="objectName">Learning Object</div>
+				<div class="objectDetails">details of the learning object</div>
+			</div>
+			<div class="objectAssigned"><input type="checkbox" value="1" /></div>
+			<div class="clear"></div>
+		</div>
+		<div class="bottomBar">
+			<div class="customButton">
+				<div class="leftButton"></div>
+				<div class="text">Custom</div>
+				<div class="rightButton"></div>
+			</div>
+			<div class="tutorButton">
+				<div class="leftButton"></div>
+				<div class="text">Choose a Tutor</div>
+				<div class="rightButton"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+	
+</div>

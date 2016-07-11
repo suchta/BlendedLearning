@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>BLE - Demo</title>
+		<meta name="description" content="">
+		
+		<link href="css/default.css" rel="stylesheet" />
+		
+		<script type="text/javascript" charset="utf-8" src="js/lib/prototype.js"></script>
+		<script>
+			(function() {
+				
+				var handleResize = function(event)
+				{
+					var loader = $('Loader');
+					var bg = $('Background');
+					var d = document.viewport.getDimensions();
+					var w = loader.getWidth();
+					var h = loader.getHeight();
+					loader.setStyle({
+						top: Math.ceil((d.height - h)/2) + 'px'
+					});
+					
+					bg.setStyle({
+						height: d.height + 'px'
+					});
+				};
+				
+				
+				Event.observe(window, 'load', function() 
+				{
+					handleResize();
+					$('Loader').setStyle({visibility: 'visible'});
+					Event.observe(window, 'resize', handleResize);
+					
+					var paramString = window.location.search.substring(1);
+					var params = paramString.toQueryParams();
+					var dataMain = 'js/main.debug.js';
+					var requireJS = 'js/lib/require.js';
+					var script = new Element('script', {
+						'type'		:	'text/javascript',
+						'charset'	: 	'utf-8',
+						'src'		: 	requireJS,
+						'data-main'	: 	dataMain
+					});
+					$$('head')[0].insert(script);
+				});
+				
+			}());
+			
+			
+		</script>
+        
+		<script>
+		<!-- this function closes all Lightbox popup Dialogs by changing their CSS back to the default  -->
+		
+        function darkenBackground() { document.getElementById('createpopup').className = 'bls-overlay  bls-overlayActive';  }
+		
+        function closeAllDialogs()
+        {
+			// animate out dark background
+			document.getElementById('createpopup').className = 'bls-overlay';  
+			
+			// list all Popup types that need to be closed
+			document.getElementById('bls-popupGoalsDialog').className = 'bls-popupDialog'; 
+			document.getElementById('shd-popupCLODialog').className = 'bls-popupDialog'; 
+			document.getElementById('bls-popupNotesDialog').className = 'bls-popupDialog'; 
+			document.getElementById('bls-calendarDialog').className = 'bls-popupDialog'; 
+			document.getElementById('bls-learningObjectsDialog').className = 'bls-popupDialog'; 
+			
+			document.getElementById('bls-curriculummanagerdialog').className = 'bls-popupDialog'; 
+			document.getElementById('bls-physicalresourcedialog').className = 'bls-popupDialog'; 
+			document.getElementById('bls-tutormanagerdialog').className = 'bls-popupDialog'; 
+			return false;
+        }
+		
+		<!-- this function opens the Lightbox popup Dialog by changing their CSS-->
+        function openCLODialog()
+        {
+			darkenBackground()
+			document.getElementById('shd-popupCLODialog').className = 'bls-animatePopupDialog shd-popupCLODialogOpen bls-popupDialog';   
+			return false;
+        }
+        function openGoalsDialog()
+        {
+			darkenBackground()
+			document.getElementById('bls-popupGoalsDialog').className = 'bls-animatePopupDialog bls-popupGoalsDialogOpen bls-popupDialog';   
+			return false;
+        }
+		
+        function openNotesDialog()
+        {
+			darkenBackground();
+			document.getElementById('bls-popupNotesDialog').className = 'bls-animatePopupDialog bls-popupDialogNotesOpen bls-popupDialog';   
+			return false;
+        }
+
+        function openLearningObjectsDialog()
+        {
+			darkenBackground();
+			document.getElementById('bls-learningObjectsDialog').className = 'bls-animatePopupDialog bls-popupDialogNotesOpen bls-popupDialog';   
+			return false;
+        }
+		
+        function openCurricilumManagerDialog()
+        {
+			darkenBackground();
+			document.getElementById('bls-curriculummanagerdialog').className = 'bls-animatePopupDialog bls-popupDialogNotesOpen bls-popupDialog';   
+			return false;
+        }
+		
+        function openPhysicalResourceDialog()
+        {
+			darkenBackground();
+			document.getElementById('bls-physicalresourcedialog').className = 'bls-animatePopupDialog bls-popupDialogNotesOpen bls-popupDialog';   
+			return false;
+        }
+		
+		function openTutorManagerDialog()
+        {
+			darkenBackground();
+			document.getElementById('bls-tutormanagerdialog').className = 'bls-animatePopupDialog bls-popupDialogNotesOpen bls-popupDialog';   
+			return false;
+        }
+		
+        function openCalendarDialog(caller)
+        {
+			// pass the data through the onclick via the 'name' tag: http://www.insitedesignlab.com/passing-parameters-in-javascript-onclick-event/
+			var titleText = caller.name;
+			darkenBackground();
+			
+			document.getElementById('bls-calendarTitle').innerHTML = titleText; // update the title of the Calendar to match what we got from angular
+			// source: http://www.tizag.com/javascriptT/javascript-innerHTML.php
+			
+			document.getElementById('bls-calendarDialog').className = 'bls-animatePopupDialog bls-popupDialogCalendarOpen bls-popupDialog';   
+			return false;
+        }
+        </script>
+        
+        
+        <script>
+		(function() {
+			var updateSize = function()
+			{
+				// if this was called before the content loaded in
+				if( document.getElementsByClassName("Viewport").length < 1 || document.getElementsByClassName("bls-header").length < 1 || document.getElementById("bls-note") == undefined || document.getElementById("bls-content") == undefined ) return;
+				
+				// get references to elements
+				var viewPort = document.getElementsByClassName("Viewport")[0];
+				var header = document.getElementsByClassName("bls-header")[0];		
+				var notes = document.getElementById("bls-note");
+				var content = document.getElementById("bls-content");
+				
+				
+				// get current element dimensions
+				var total = parseInt(viewPort.offsetHeight);
+				var headerOffset = parseInt(header.offsetHeight);
+// Firefox for some reason 'padding' returns undefined, so this must be set specifically to either padding-top/bottom... on this particular element both top and bottom are the same
+				var paddingVal = parseInt(window.getComputedStyle(notes, null).getPropertyValue('padding-top') );
+				var minHeight = parseInt(document.getElementsByClassName("bls-notesul")[0].offsetHeight) - ( paddingVal *1);
+				
+				// perform calculations... 
+				var contentHeight = content.offsetHeight - ( paddingVal *2);
+				var calculatedHeight = (total - headerOffset) - ( paddingVal *2);
+				var actualHeight = Math.max(contentHeight,calculatedHeight); // content must be the larger dimension of either the main content area, or if that is too small then viewport - header
+				actualHeight = Math.max(actualHeight,minHeight); // notes must be at least as tall as its original size ( ie the elements inside ) ( this can happen if the 'student details are opened...
+				
+				var heightAsString = String(actualHeight) + "px"; 
+				notes.style.height = heightAsString ;  // http://www.mikedoesweb.com/2011/100-height-div-with-2-lines-of-code/ 
+				
+				//alert("paddingVal is: " + paddingVal + "\n total: " + total + "\n header: " + headerOffset +"\nminHeight: " + minHeight);
+				//alert("paddingVal Orig: " + window.getComputedStyle(notes, null).getPropertyValue('padding-top'));
+				//alert((total - headerOffset) - ( parseInt(paddingVal) *2) + "px");
+				//alert("contentHeight is: " + contentHeight + "\ncalculatedHeight: " + calculatedHeight + "\nminHeight: " + minHeight );
+				//alert("total is: " + total );
+			};
+			
+			Event.observe(window, 'load', function() 
+			{
+				// the only way to 'listen' to a div being resized is via a dirty check: http://stackoverflow.com/questions/18184672/pure-javascript-div-resize-event
+				window.setInterval(updateSize,300); // TODO, maybe tie this to the 'dirty check' of AngularJS ?
+				updateSize();
+				//Event.observe(window, 'resize', updateSize);
+			});
+		}());
+        </script>
+    		<script>
+			
+			 function keepVisiblePopup (e) {  // this makes the popup stay on screen if the mouse rolls over it
+			 var thing = document.getElementById("bls-ChartRollover");
+			 	thing.style.display="inherit"; 
+			 }
+			
+			// Get javascript rollover over IMP map hotspot: http://stackoverflow.com/questions/15152681/image-map-with-image-popup-on-hover-over-hotspot
+			 function chartRollover (e) { 
+			 	if (e == null) { e = window.event } // Firefox Fix
+				
+				var thing = document.getElementById("bls-ChartRollover");
+
+
+				// this MUST be set BEFORE 'offsetParent' is checked as non-displayed elements dont have that
+				thing.style.display="inherit"; 
+				
+				// these must be RESET at each call otherwise they would stack up
+				thing.style.left =0; thing.style.top =0;
+				
+				// in order to get local coordinates we must get the offset
+				var offset = findPos(thing);
+				thing.style.left = ( e.clientX - offset.x ) + 'px';
+				thing.style.top =  e.clientY  + 'px';
+
+				//console.log("thing.style.left: " + thing.style.left + " / " + thing.style.top + " / offset x/y: " + offset.x + " / " +  offset.y + " Client X/Y: " +  e.clientX + " / " +  e.clientY );
+				return true;
+			 }
+			 
+			 
+			 
+			 function chartRollout (e) {
+				var thing = document.getElementById("bls-ChartRollover");
+				thing.style.display="none";
+				//console.log("HIDE");
+				return true;
+			 }
+			 
+			 
+			function findPos (obj) {
+				var curleft = 0,
+					curtop = 0;
+			
+			//console.log("obj.offsetParent: " + obj.offsetParent);
+				if (obj.offsetParent) 
+				{
+					do {
+						curleft += obj.offsetLeft;
+						curtop += obj.offsetTop;
+						
+						//console.log("curleft: " + curleft + " / obj.offsetLeft: " + obj.offsetLeft);
+					} 
+					while (obj = obj.offsetParent);
+				}
+				
+				return { x: curleft, y: curtop };
+			}
+			</script> 
+         
+         
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="Background"></div>
+			<div id="Loader" style="visibility:hidden;">
+				<img src="img/Loader/loader.gif" height="32" width="32" />
+			</div>
+			<div id="Core" style="display:none;">
+				<dialogContainer></dialogContainer> <!-- defined here so the overlay can lay over systempanel as well -->
+            
+                <div class="bls-overlay" id="createpopup">                      
+                  <div class="bls-verticalcontainer">
+                  
+
+                  
+                     <div id="bls-learningObjectsDialog" class="bls-popupDialog">
+                      <div class="bls-popupheader">
+                        <h2 class="bls-popupheaderLbjects">LEARNING OBJECTS</h2>
+                        <a href="" onClick="closeAllDialogs()">close</a>
+                      </div>
+                      <div id="bls-learningobjectssubheader"> <dt>FOUNDATIONAL</dt> <dd>08/01/2013 - 08/11/2013</dd></div> 
+
+
+<!-- HARD CODED DATA START-->
+<table class="bls-learningobjecttable"> <tbody>
+	<tr>
+	  <td>Learning Object One</td>
+	  <td class="bls-lobjectvalue">09/15/2013</td>
+	  <td class="bls-lobjectvalue">73%</td>
+	</tr>
+	
+	<tr>
+	  <td>Learning Object Two</td>
+	  <td class="bls-lobjectvalue">09/15/2013</td>
+	  <td class="bls-lobjectvalue">88%</td>
+	</tr>      
+				  
+	<tr>
+	  <td>Learning Object Three</td>
+	  <td class="bls-lobjectvalue">09/15/2013</td>
+	  <td class="bls-lobjectvalue">84%</td>
+	</tr>
+	
+	<tr>
+	  <td>Learning Object Four</td>
+	  <td class="bls-lobjectvalue">09/16/2013</td>
+	  <td class="bls-lobjectvalue">78%</td>
+	</tr>      
+				  
+	<tr>
+	  <td>Learning Object Five</td>
+	  <td class="bls-lobjectvalue">09/16/2013</td>
+	  <td class="bls-lobjectvalue">82%</td>
+	</tr>
+	
+	<tr>
+	  <td>Learning Object Six</td>
+	  <td class="bls-lobjectvalue">09/16/2013</td>
+	  <td class="bls-lobjectvalue">75%</td>
+	</tr>
+	
+	<tr>
+	  <td>Learning Object Seven</td>
+	  <td class="bls-lobjectvalue">09/16/2013</td>
+	  <td class="bls-lobjectvalue">84%</td>
+	</tr>      
+				  
+	<tr>
+	  <td>Learning Object Eight</td>
+	  <td class="bls-lobjectvalue">09/17/2013</td>
+	  <td class="bls-lobjectvalue">87%</td>
+	</tr>
+	
+	<tr>
+	  <td>Learning Object Nine</td>
+	  <td class="bls-lobjectvalue">09/17/2013</td>
+	  <td class="bls-lobjectvalue">73%</td>
+	</tr>      
+				  
+	<tr>
+	  <td>Learning Object Ten</td>
+	  <td class="bls-lobjectvalue">09/17/2013</td>
+	  <td class="bls-lobjectvalue">91%</td>
+	</tr>
+	
+	<tr>
+	  <td>Learning Object Eleven</td>
+	  <td class="bls-lobjectvalue">09/17/2013</td>
+	  <td class="bls-lobjectvalue">83%</td>
+	</tr>
+	
+	<tr>
+	  <td>Learning Object Twelve</td>
+	  <td class="bls-lobjectvalue">09/17/2013</td>
+	  <td class="bls-lobjectvalue">86%</td>
+	</tr>      
+				  
+	<tr>
+	  <td>Learning Object Thirteen</td>
+	  <td class="bls-lobjectvalue">09/17/2013</td>
+	  <td class="bls-lobjectvalue">84%</td>
+	</tr>
+	
+	<tr>
+	  <td>Learning Object Fourteen</td>
+	  <td class="bls-lobjectvalue">09/17/2013</td>
+	  <td class="bls-lobjectvalue">77%</td>
+	</tr>      
+				  
+	<tr>
+	  <td>Learning Object Fifteen</td>
+	  <td class="bls-lobjectvalue">09/18/2013</td>
+	  <td class="bls-lobjectvalue">73%</td>
+	</tr>
+	
+	<tr>
+	  <td>Learning Object Sixteen</td>
+	  <td class="bls-lobjectvalue">09/18/2013</td>
+	  <td class="bls-lobjectvalue">86%</td>
+	</tr>      
+				  
+	<tr>
+	  <td>Learning Object Seventeen</td>
+	  <td class="bls-lobjectvalue">09/018/2013</td>
+	  <td class="bls-lobjectvalue">83%</td>
+	</tr>
+</tbody></table>
+<!-- HARD CODED DATA END-->  
+
+
+                    </div>       
+                  
+
+					<ng-include src="'/apps/Scheduler/tpl/TutorManager.html'" ></ng-include> 
+					<ng-include src="'/apps/Scheduler/tpl/PhysicalResourceManager.html'" ></ng-include> 
+					<ng-include src="'/apps/Scheduler/tpl/CLOPopup.html'" ></ng-include> 
+					<ng-include src="'/apps/PlpWizard/tpl/GoalsPopup.html'" ></ng-include> 
+					<ng-include src="'/apps/Scheduler/tpl/CurriculumManager.html'" ></ng-include> 
+                    
+                    
+                    <div id="bls-popupNotesDialog" class="bls-popupDialog">
+                      <div class="bls-popupheader">
+                        <h2>NOTES</h2>
+                        <a href="" onClick="closeAllDialogs()">close</a>
+                      </div>
+                       <textarea>Enter Notes here.</textarea>
+                      <div class="bls-popupbottombar">
+                        <a href="" onClick="closeAllDialogs()" class="bls-popupyesno bls-buttonmedium bls-grassgreenbutton">SAVE</a> 
+                        <a href="" onClick="closeAllDialogs()" class="bls-popupyesno bls-buttonmedium bls-greenbutton">CANCEL</a>
+                      </div>
+                    </div>
+                    
+                    
+                    <div id="bls-calendarDialog" class="bls-popupDialog">
+
+						<p id="bls-calendarTitle">CALENDAR TITLE</p>
+                      <div>
+                        <a href="" onClick="closeAllDialogs()" class="bls-popupback bls-buttonsmall bls-grassgreenbutton">BACK</a>
+                      </div>
+                      
+                      <div  class="bls-hiddenButton">
+                      
+                      <a href="" onclick="closeAllDialogs(); openNotesDialog();"></a>
+                      </div>
+                      
+                    </div>
+                    
+                             
+                  </div>
+                </div>
+            
+				<div systempanel></div>
+				<div class="Viewport ng-view"></div>
+                
+                
+			</div>
+		</div>
+		<script src="//www.google.com/jsapi"></script>
+		<script>
+			google.load('visualization', '1', {packages: ['corechart']});
+		</script>
+	</body>
+</html>

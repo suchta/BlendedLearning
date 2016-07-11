@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* Misc Graphics */
+
+
+.bls-buttonsmall {
+  display:block;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 77px;
+  height: 23px;
+  text-align: center;
+  line-height: 23px;
+  font-size: 11px;
+  color: #fff;
+  text-decoration:none;
+  text-indent: 0px;
+}
+
+.bls-buttonverysmall {
+  width: 50px;
+  height: 18px;
+  line-height: 18px;
+}
+
+.bls-buttonmedium {
+  display: inline-block;
+  border-radius: 5px;
+  width: 89px;
+  height: 32px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  line-height: 32px;
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration:none;
+  text-indent: 0px;
+}
+
+.bls-greybutton {
+  background: #999;
+}
+
+.bls-greenbutton2 {
+  background: #669900;
+}
+
+.bls-greenbutton {
+  background: #9acccd;
+}
+  
+.bls-grassgreenbutton {
+  background: #98cc00;
+}
+
+
+  
+.bls-bluebutton {
+  background: #66cbff;
+}
+
+.bls-redbutton {
+  background: #ff999a;
+}

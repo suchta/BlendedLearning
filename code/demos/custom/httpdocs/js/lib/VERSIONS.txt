@@ -1,0 +1,6 @@
+backbone: 0.9.10
+jquery: 1.9.1
+json2: ?
+lawnchair: 0.6.1
+require: 2.1.1
+underscore: 1.4.4

@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.bls-title {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F9F9F9), color-stop(100%, #E5E5E5)); /* Safari 4+, Chrome 2+ */
+	background: linear-gradient(0deg, #E5E5E5, #F9F9F9) repeat scroll 0 0 transparent;
+	border-bottom: 1px solid #9B9D9C;
+	display: table;
+	height: 49px;
+	width: 100%;
+}
+
+#bls-closeappholder {
+  display: table;
+  height: 49px;
+  float: right;
+  margin-right: 10px;
+}
+
+#bls-closeapp {
+  width: 19px;
+  height: 20px;
+  background-image: url(/core/res/img/closeIcon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: table-cell;  /* vertically centralising text: http://www.vanseodesign.com/css/vertical-centering/ */
+  vertical-align: middle ;
+}
+
+.bls-titleheader {
+	background-position: 20px center;
+	background-repeat: no-repeat;
+	color: #979797;
+	display: table-cell;  /* vertically centralising text: http://www.vanseodesign.com/css/vertical-centering/ */
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 0.1em;
+	margin-left: 20px;
+	text-indent: 55px;
+	vertical-align: middle;
+}
+

@@ -1,0 +1,30 @@
+						
+						
+						
+						
+					
+						
+                <table class="shd-rollcalltable">
+                  <tbody><tr>
+                    <th class="shd-rollcalltablecol1 shd-rollcallfirstheadercol"><p class="shd-rollcalltitle">ROLL CALL</p><h4 class="shd-rollcalltitle shd-rollcallcourse"> | {{ courseTitle | uppercase}}</h4></th>
+                    <th class="shd-rollcalltablecol2 shd-rollcalltableheader">LATE</th>
+                    <th class="shd-rollcalltablecol3 shd-rollcalltableheader">PRESENT</th>
+					<th class="shd-rollcalltablecol4 shd-rollcalltableheader">ABSENT</th>
+					<th class="shd-rollcalltablecol5 shd-rollcalltableheader">EARLY OUT</th>
+					<th class="shd-rollcalltablecol6 shd-rollcalltableheader">EXCUSED</th>
+					<th class="shd-rollcalltablecol7 shd-rollcalltableheader">NOTE</th>
+                  </tr>
+                  <tr ng-repeat="student in studentlist | filter:search">
+                    <td class="shd-rollcalltablecol1 shd-picinfo"><div class="shd-picholder" style="background: url({{getStudentPicURL(student)}}) center no-repeat; background-size: 100% auto;"><div class="{{producealertStyle(student)}}"></div></div><p class="shd-studentname">{{student.name}}</p></td>
+                    <td class="shd-rollcalltablecol2"><div class="shd-irmiscbase {{determineLateStatus(student)}}"></div></td>
+                    <td class="shd-rollcalltablecol3"><div class="shd-irmiscbase {{determinePresentStatus(student)}}"></div></td>
+					<td class="shd-rollcalltablecol4"><div class="shd-irmiscbase {{determineAbsentStatus(student)}}"></div></td>
+					<td class="shd-rollcalltablecol5"><div class="shd-irmiscbase {{determineEarlyOutStatus(student)}}"></div></td>
+					<td class="shd-rollcalltablecol6"><div class="shd-irmiscbase {{determineExcusedStatus(student)}}"></div></td>
+					<td class="shd-rollcalltablecol7"><div class="shd-irmiscbase {{determineNoteStatus(student)}}" onclick="openNotesDialog()"></div></td>
+                  </tr>
+                </tbody></table>
+						
+						
+						
+						

@@ -1,0 +1,188 @@
+
+<div id="shd-wrapper">
+
+
+	<div id="shd-headerevent">
+	  
+		<div class="bls-title">
+		<h1 class="bls-titleheader plp-titleheader">SCHEDULER</h1>
+		<div id="bls-closeappholder"><a id="bls-closeapp" href="#">close</a></div>
+	  </div>
+	 
+		 <div id="shd-headerinfo"> 
+		 
+			<div id="shd-welcomeboxevent">
+			
+		
+				<h3 id="shd-dateformatevent">{{currentDayString}}</h3>
+				<h3 id="shd-coursetitle">{{courseTitle}}</h3>
+				
+				<div id="shd-eventnav"> 
+					<a class="shd-classlistviewbutton" id="shd-backtoschedule" href="#/Scheduler/Schedule/me/today">SCHEDULE</a><a class="{{determineSwitchButtonStyle()}}"  ng-click="switchToClassView()">CLASS VIEW</a><a class="{{determineSwitchButtonStyle(true)}}"  ng-click="switchToListView()">LIST VIEW</a>
+				</div>
+			
+			</div>
+				
+				<div id="shd-classlistoptionsholder"> 
+					<div id="shd-options">
+					<div class="shd-searchbox {{determineSearchVisibility()}}"><a class="shd-firbase {{determineSearchButtonStatus()}}" href="" ng-click="toggleActivateSearchBox()">Search</a><input class="{{determineSearchFilterStatus()}}" type="text" name="searchfilter" ng-model="search.name"="></div>
+					<a class="shd-firbase" id="shd-gradebookbutton" href="#">Grade Book</a>
+					</div>
+				</div>
+			</div>
+			 
+			
+			
+		 </div>
+
+		 
+		 
+	<div id="shd-eventcontent">
+		<div id="shd-eventcontentholder">
+		
+		
+
+
+			
+			
+			<div id="shd-eventmiscbuttons">  
+				<a id="shd-rollcallbutton" class="shd-irmiscbase shd-irmiscbase38" href="" ng-click="switchToListRollcallView()">Roll Call</a>
+				<a id="{{determineCLOButtonState()}}" class="shd-irmiscbase shd-irmiscbase38" href="" ng-click="toggleCLOPanelVisibility()" >Custom Learning Object list</a>
+				<a id="shd-peoplebutton" class="shd-irmiscbase shd-irmiscbase38" href="" onclick="openTutorManagerDialog()">People Resources</a>
+				<a id="shd-curriculumbutton" class="shd-irmiscbase shd-irmiscbase38" href="" onclick="openCurricilumManagerDialog()">Curriculum Resources</a>
+				<a id="shd-physicalbutton" class="shd-irmiscbase shd-irmiscbase38" href="" onclick="openPhysicalResourceDialog()">Physical Resources</a>
+				
+				<p id="shd-periodnum">3</p>
+				<!--  <div id ="shd-vertrotcontainer">  </div>-->
+				<div id ="shd-vertrotcontainer">
+				<p id="shd-periodname">THIRD PERIOD</p>
+				</div>
+				
+				
+			</div>
+
+			
+			<div id="shd-eventclopanel" class="{{determineCLOPanelVisibility()}}">  
+			<h4 id="shd-clotitle" >CLO List</h4>
+				<ul>
+					<li ng-repeat="clo in CLOlist">
+					<div class="shd-cloitemname">CLO name</div>
+					<div class="shd-cloapplybuttonholder"><a class="bls-bluebutton bls-buttonsmall bls-buttonverysmall  shd-cloapplybutton" onclick="openCLODialog()">APPLY</a></div>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="shd-eventstudents">
+				<div class="center-container">
+				
+				
+				
+    <!--<div class="bin" droppable drop="handleDrop()"></div>
+    <div class="item" id="item1" draggable></div> -->
+				
+				
+				
+				
+				
+				
+				
+				<span ng-switch="listview==false"> <!-- http://docs.angularjs.org/api/ng.directive:ngSwitch -->
+				
+				
+					<span ng-switch-when="true">
+						<ng-include src="'/apps/Scheduler/tpl/classview.html'" ></ng-include>
+					</span>
+					
+					<span ng-switch-when="false">
+					
+					
+						<span ng-switch="rollCall==false">
+							<span ng-switch-when="true">
+								<ng-include src="'/apps/Scheduler/tpl/listview.html'" ></ng-include>
+							</span>
+							
+							<span ng-switch-when="false">
+								<ng-include src="'/apps/Scheduler/tpl/rollcallview.html'" ></ng-include>
+							</span>
+							
+							<span ng-switch-default></span>	
+						</span>
+						
+						
+					</span>
+					
+				<span ng-switch-default></span>
+				
+				 </span>  <!-- END OF NG-SWITCH -->
+				
+				
+				</div>
+			</div>
+
+			<div id="shd-eventdetail" class="{{determineStudentDetailVisibility()}}"> 
+			
+				<div id="shd-studentdetail" class="shd-studentdetail"> 
+					<h4 id="shd-currentstudentnametitle">STUDENT DETAIL</h4>
+					<div id="shd-studentswitchstepper">
+						<a id="shd-studentstepleft" class="shd-irmiscbase" href="" ng-click="showPrevStudent()">Left</a>
+						<p id="shd-studentstepinfo"><span id="shd-stepinfo" class="shd-classlistviewbutton" >{{currentStudentIndex+1}} / {{selectedStudents.length}}</span></p>
+						<a id="shd-studentstepright" class="shd-irmiscbase" href="" ng-click="showNextStudent()">Right</a>
+					</div>
+				</div>
+				
+				<div id="shd-studentdata"  class="shd-studentdetail">
+					<p id="shd-currentname">{{currentStudent.nameshort}}</p>
+					<p id="shd-currentclassname">{{courseTitle}}</p>
+					<p id="shd-currentlessonname">Current lesson name</p>
+				</div>
+				
+
+				
+				<div id="shd-studentalerts"  class="shd-studentdetail"> 
+					<dl>
+					  <span class="shd-newline"> <dt id="shd-interventionalert" class="shd-irmiscbase">Interventions</dt><dd class="shd-alertdefinition">{{currentStudent.interventionAlert}}</dd> </span>
+					  <span class="shd-newline"> <dt id="shd-PLPalert" class="shd-irmiscbase">PLPs</dt><dd class="shd-alertdefinition">{{currentStudent.plpAlert}}</dd> </span>
+					  <span class="shd-newline"> <dt id="shd-sendmessage" class="shd-irmiscbase">Message</dt><dd class="shd-alertdefinition"><a id="shd-sendmessagebutton" href="">Send Message</a></dd> </span>
+					</dl>
+				</div>
+				
+				<div id="shd-studentprogress"  class="shd-studentdetail"> 
+					<dl>
+					  <span class="shd-newlinebr"> <dt class="shd-progresstitle">LAST WEEK PROGRESS</dt>
+						  <dd>
+						  <div class="shd-progressbarbg"><div class="shd-barprogressbase shd-barprogress1" style="width: {{calculateLastWeekProgress1(currentStudent)}}%;">{{currentStudent.lastWeekProgress1}}</div></div>
+						  <div class="shd-progressbarbg"><div class="shd-barprogressbase shd-barprogress2" style="width: {{calculateLastWeekProgress2(currentStudent)}}%">{{currentStudent.lastWeekProgress2}}</div></div>
+						  </dd> 
+					  </span>
+					  <span class="shd-newlinebr"> <dt class="shd-progresstitle">9 WEEKS PROGRESS</dt>
+						  <dd>
+						  <div class="shd-progressbarbg"><div class="shd-barprogressbase shd-barprogress1" style="width: {{calculateNineWeekProgress1(currentStudent)}}%;">{{currentStudent.nineWeekProgress1}}</div></div>
+						  <div class="shd-progressbarbg"><div class="shd-barprogressbase shd-barprogress2" style="width: {{calculateNineWeekProgress2(currentStudent)}}%">{{currentStudent.nineWeekProgress2}}</div></div>
+						  </dd> 
+					  </span>
+					</dl>
+				</div>
+				
+				<div id="shd-studentdatamisc"  class="shd-studentdetail"> 
+					<dl>
+					  <span class="shd-newlinebr"> <dt class="shd-miscdatatitle">LEARNING COACH: </dt> <span class="shd-newlinebr"><dd class="shd-miscdefinition">{{currentStudent.coach}}</dd></span> </span>
+					  <span class="shd-newlinebr"> <dt class="shd-miscdatatitle">CURRENT GRADE:</dt><dd class="shd-miscdefinition" id="shd-gradedef">{{currentStudent.currentGrade}}</dd> </span>
+					  <span class="shd-newlinebr"> <dt class="shd-miscdatatitle">DATE ENROLLED IN SCHOOL: </dt><dd class="shd-miscdefinition">{{ currentStudent.enrollDate}}</dd> </span>
+					</dl>
+				</div>
+			
+			</div>
+
+		 </div>
+		
+	</div> 
+		 
+</div>
+
+
+
+	 
+ 
+
+
+

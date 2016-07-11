@@ -1,0 +1,41 @@
+firstName,First Name,William
+lastName,Last Name,Taylor
+middleInitial,Middle Initial,R.
+,,
+suffix,Suffix,n/a
+nickname,"""Nickname""",Bill
+age,Age,16
+,,
+studentId,Student Id,100016
+schools,Schools,Edison High School
+familyId,Family Id,345
+,,
+username,Username,test
+password,Password,test
+,,
+gender,Gender,Male
+dateOfBirth,D.O.B,9/26/99
+somefield,somefield,Male
+,,
+status,Active,Active
+email,Email,b.taylor@tmail.com
+timezone,Timezone,"(GMT -5, DST) Eastern"
+,,
+country,Country,United States of America
+schoolDistrict,School District,Pittsburgh Public School District
+studentRole,Student Role,Tutor
+,,
+gradeLevel,Grade Level,10th Grade
+gradeLevelStartDate,Grade Level Start,9/5/10
+geniusUsername,Genius Username,test
+,,
+,,
+startDate,9/16/13,
+endDate,9/30/13,
+imageUrl,/core/res/img/sp100016.png,
+topData,2013,School Year
+topData,Edison High School,School Name
+topData,10th Grade,Grade Level
+topData,(215) 555-3494,Parent's cell
+,,
+isMeetingGoals,TRUE,

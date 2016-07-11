@@ -1,0 +1,69 @@
+
+<div id="shd-wrapper">
+
+
+	<div id="shd-header">
+	  
+		<div class="bls-title">
+		<h1 class="bls-titleheader plp-titleheader">SCHEDULER</h1>
+		<div id="bls-closeappholder"><a id="bls-closeapp" href="#">close</a></div>
+	  </div>
+	 
+		 <div id="shd-headerinfo"> 
+		 
+			<div id="shd-welcomebox">
+			
+				<h3 id="shd-usernameformat">Welcome {{currentUserName}}</h3>
+				<h3 id="shd-dateformat">{{currentDayString}}</h3>
+			
+				<div id="shd-dateselector"><a id="shd-dateprev" class="bls-greybutton shd-dateselectorbutton" href="#/Scheduler/Schedule/{{userId}}/{{prevDateStr}}">Prev</a><a id="shd-datecurrent" class="bls-greybutton shd-dateselectorbutton" href="#/Scheduler/Schedule/{{userId}}/today">TODAY</a><a id="shd-datenext" class="bls-greybutton shd-dateselectorbutton" href="#/Scheduler/Schedule/{{userId}}/{{nextDateStr}}">Next</a>
+			
+			</div>
+				
+
+			</div>
+			 
+			<div id="shd-calendarholder">
+				
+					<a id="shd-prevdate" href="#/Scheduler/Schedule/{{userId}}/{{prevDateStr}}">Prev</a>
+					<div id="shd-calendar" > 
+					<div id="dp3" datepicker="" show-weeks="false"  ng-model="myDate"> </div>
+					
+					
+					</div>
+					<a id="shd-nextdate" href="#/Scheduler/Schedule/{{userId}}/{{nextDateStr}}">Next</a>
+				
+			</div>
+			
+		 </div>
+	</div>
+
+
+<!-- <div style="top: {{testFunction()}}px;"> </div> -->
+	<div id="shd-eventlist">
+	 
+		
+	 
+		<div id="shd-timeslots">
+			<ul>
+			<li class="shd-timeslotitem" ng-repeat="slot in timeSlots">{{slot}}</li>
+			</ul>
+		</div>
+	 
+		<div id="shd-eventarea"> 
+		<div id="shd-timeplayhead" style="top: {{calculatePlayHeadPos()}}px;"> </div>
+		<div id="shd-timeplayheadcirlce" style="top: {{calculatePlayHeadPos() -2}}px;"> </div>
+		
+			<ul>
+				<li style="top: {{studyevent.yPos}}px;" ng-repeat="studyevent in studyevents"> <p class="shd-eventNum" style="height: {{studyevent.height}}px;">{{$index}}</p> <a class="shd-eventName" style="background: rgba({{getColorBG(studyevent.color)}}, .5); border: 1px solid #{{getColorBorder(studyevent.color)}}; height: {{studyevent.height}}px;" href="#/Scheduler/Event/{{userId}}/{{studyevent.id}}" />{{studyevent.name}}</a></li>
+			</ul>
+		</div>
+		 
+  
+  	 
+	 
+		
+	</div>
+	 
+ 
+</div>

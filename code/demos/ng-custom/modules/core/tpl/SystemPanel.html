@@ -1,0 +1,5 @@
+<div class="SystemPanel">
+	<a class="Application" ng-repeat="application in applications" ng-class="getApplicationClass(application)" ng-href="{{getApplicationHref(application)}}" ng-click="handleClick(application)">
+		<img src="/core/res/icons/toolbar.{{application.name|lowercase}}.svg" title="{{application.title}}" alt="{{application.title}}" />
+	</a>
+</div>

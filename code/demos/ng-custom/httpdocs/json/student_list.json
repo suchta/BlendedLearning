@@ -1,0 +1,59 @@
+{
+    "student": [
+        {
+            "id": 159728,
+            "name": "Jonny Morrill",
+            "user_level": 0,
+            "courses": [
+                68807,
+                68808,
+                68809,
+                68810
+            ]
+        },
+        {
+            "id": 159738,
+            "name": "Charles Wong",
+            "user_level": 0,
+            "courses": [
+                68807,
+                68808,
+                68809,
+                68810
+            ]
+        },
+        {
+            "id": 159748,
+            "name": "Martin Kelemen",
+            "user_level": 0,
+            "courses": [
+                68807,
+                68808,
+                68809,
+                68810
+            ]
+        },
+        {
+            "id": 159758,
+            "name": "Justin Redfield",
+            "user_level": 0,
+            "courses": [
+                68807,
+                68808,
+                68809,
+                68810
+            ]
+        },
+        {
+            "id": 159768,
+            "name": "Kondo Park",
+            "user_level": 0,
+            "courses": [
+                68807,
+                68808,
+                68809,
+                68810
+            ]
+        }
+    ]
+}

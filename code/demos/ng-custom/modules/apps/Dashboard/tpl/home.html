@@ -1,0 +1,17 @@
+<div class="bls-title ng-scope">
+	<h1 class="bls-titleheader dashboard-titleheader">DASHBOARD</h1>
+</div>
+
+<div id="dashboard-title">
+	<div id="dashboard-name">Welcome {{ name }}</div>
+	<div id="dashboard-date">{{today | date:'MMMM d, yyyy'}}</div>
+</div>
+
+<br>
+<br>
+<div id="chart_wrapper">
+	<db_popupmenu class="popoupmenu"></db_popupmenu><!--dashboard popup dropdown menu holder-->
+	<div ng-repeat="chart in charts">
+		<div dashboardchart chart="chart" class="chart_item"></div>
+	</div>
+</div>

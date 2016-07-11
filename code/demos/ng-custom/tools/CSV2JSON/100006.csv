@@ -1,0 +1,41 @@
+firstName,First Name,David
+lastName,Last Name,Shelley
+middleInitial,Middle Initial,M.
+,,
+suffix,Suffix,n/a
+nickname,"""Nickname""",David
+age,Age,18
+,,
+studentId,Student Id,100005
+schools,Schools,Golden Gate High School
+familyId,Family Id,356
+,,
+username,Username,test
+password,Password,test
+,,
+gender,Gender,Male
+dateOfBirth,D.O.B,12/10/95
+somefield,somefield,Male
+,,
+status,Active,Active
+email,Email,david.shelley@tmail.com
+timezone,Timezone,"(GMT -8, DST) Pacific"
+,,
+country,Country,United States of America
+schoolDistrict,School District,Bay Area School District
+studentRole,Student Role,Tutor
+,,
+gradeLevel,Grade Level,12th Grade
+gradeLevelStartDate,Grade Level Start,9/5/09
+geniusUsername,Genius Username,test
+,,
+,,
+startDate,9/16/13,
+endDate,9/30/13,
+imageUrl,/core/res/img/sp100006.png,
+topData,2013,School Year
+topData,Golden Gate High School,School Name
+topData,12th Grade,Grade Level
+topData,(415) 555-4855,Parent's cell
+,,
+isMeetingGoals,TRUE,

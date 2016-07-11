@@ -1,0 +1,75 @@
+						
+						
+						<div class="shd-classviewbasebox"> <h4>{{(courseTitle  | uppercase) + " CLASS"}}</h4> </div>
+						<ul>
+						
+							<!-- LOOP THROUGH ALL GROUPS -->
+							<li ng-repeat="currentGroup in allGroups">
+								<div class="shd-classviewbasebox" droppable  droptarget="{{currentGroup.id}}{{determineGroupType(currentGroup)}}"> 
+									<h4>{{currentGroup.name}}</h4> 
+									<ul class="shd-studentlistul">
+										<li class="shd-studentitemli" ng-repeat="participator in currentGroup.data">
+										<span ng-switch="participator.type==TYPE_STUDENT">
+										
+											<span ng-switch-when="true">
+											
+											
+												<div class="shd-studentitem" draggable id="student{{participator.data.id}}" >
+													<div class="shd-picholder shd-picholderclassview" style="background: url({{getStudentPicURL(participator.data)}}) center no-repeat; background-size: 100% auto;"> 
+														<div class="{{producealertStyle(participator.data)}}"></div>
+													</div>
+													
+													<p class="shd-studentnameclassview">{{participator.data.nameshort}}</p>
+												</div>
+												
+												
+											</span>
+											
+											<!-- IF ITS NOT A STUDENT BUT A SUBGROUP, THEN CREATE SUBGROUP BOX AND LOOP THROUGH -->
+											<span ng-switch-when="false">
+												
+												<div class="shd-classviewbasebox shd-classviewsubgroupbox" style="background:#{{getSubGroupColor(participator.subgroupIndex)}};" droppable  droptarget="{{currentGroup.id}}_SUB{{participator.subgroupIndex}}"> 
+													<ul class="shd-studentlistul">
+													
+														<li class="shd-studentitemli" ng-repeat="student in participator.data">
+														
+															<div class="shd-studentitem" draggable id="student{{student.data.id}}">
+																<div class="shd-picholder shd-picholderclassview" style="background: url({{getStudentPicURL(student.data)}}) center no-repeat; background-size: 100% auto;"> 
+																	<div class="{{producealertStyle(student.data)}}"></div>
+																</div>
+																
+																<p class="shd-studentnameclassview">{{student.data.nameshort}}</p>
+															</div>
+														
+														</li>
+														
+														
+													</ul>
+												</div>
+												
+												
+												
+											</span>
+											
+											<span ng-switch-default></span>
+										
+										</span>  <!-- END OF NG-SWITCH -->
+										
+										</li>
+										
+										<span ng-switch="currentGroup.hasNewSubGroupButton==true">
+											<span ng-switch-when="true">
+												<li class="shd-studentitemli shd-newsubgroup" droppable  droptarget="{{currentGroup.id}}_NEW"> <p class="shd-newgroupnew"> NEW</p> <p class="shd-newgroupplus">+</p> </li>
+											</span>
+											
+											<span ng-switch-when="false"> </span> <span ng-switch-default></span>
+										</span>  <!-- END OF NG-SWITCH -->
+									
+									</ul>
+								</div>
+								
+								
+							</li> <!-- END MAIN GROUP LI -->
+							
+							
+						</ul>
